@@ -1,0 +1,54 @@
+{
+  "primaryColor": "#1B49AC",
+  "elements": [
+    {
+      "uid": 51,
+      "visible": true,
+      "localName": "LineText",
+      "text": "DIGITAL SEAL",
+      "font": "Arial",
+      "fontStyle": {
+        "bold": false,
+        "italic": true,
+        "whiten": false
+      },
+      "fontSize": 20,
+      "x": 50,
+      "y": 50,
+      "rotation": 50
+    },
+    {
+      "uid": 50,
+      "visible": true,
+      "localName": "Circle",
+      "size": 52,
+      "strokeWidth": 3,
+      "lineBreak": 0
+    },
+    {
+      "uid": 47,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "Your Company Pvt. Ltd.",
+      "font": "PingFang SC",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 28,
+      "letterSpacing": 100,
+      "radius": 61,
+      "rotation": 73,
+      "invert": false
+    },
+    {
+      "uid": 48,
+      "visible": true,
+      "localName": "Circle",
+      "size": 80,
+      "strokeWidth": 6,
+      "lineBreak": 0
+    }
+  ]
+}

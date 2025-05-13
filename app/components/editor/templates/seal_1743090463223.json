@@ -1,0 +1,83 @@
+{
+  "primaryColor": "#1B49AC",
+  "elements": [
+    {
+      "uid": 20,
+      "visible": true,
+      "localName": "Line",
+      "size": 42,
+      "strokeWidth": 2,
+      "lineBreak": 96,
+      "x": 58,
+      "y": 65,
+      "rotation": 0
+    },
+    {
+      "uid": 19,
+      "visible": true,
+      "localName": "Line",
+      "size": 42,
+      "strokeWidth": 2,
+      "lineBreak": 96,
+      "x": 58,
+      "y": 58,
+      "rotation": 0
+    },
+    {
+      "uid": 18,
+      "visible": true,
+      "localName": "LineText",
+      "text": "Date:",
+      "font": "Arial Hebrew",
+      "fontStyle": {
+        "bold": false,
+        "italic": true,
+        "whiten": false
+      },
+      "fontSize": 22,
+      "x": 24,
+      "y": 62,
+      "rotation": 50
+    },
+    {
+      "uid": 17,
+      "visible": true,
+      "localName": "LineText",
+      "text": "Sign:",
+      "font": "Arial Hebrew",
+      "fontStyle": {
+        "bold": false,
+        "italic": true,
+        "whiten": false
+      },
+      "fontSize": 22,
+      "x": 24,
+      "y": 55,
+      "rotation": 50
+    },
+    {
+      "uid": 16,
+      "visible": true,
+      "localName": "LineText",
+      "text": "xYz Labs Ltd.",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 40,
+      "x": 50,
+      "y": 41,
+      "rotation": 50
+    },
+    {
+      "uid": 15,
+      "visible": true,
+      "localName": "Rect",
+      "size": 85,
+      "strokeWidth": 4,
+      "lineBreak": 0
+    }
+  ]
+}

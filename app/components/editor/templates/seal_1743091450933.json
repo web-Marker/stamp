@@ -1,0 +1,112 @@
+{
+  "primaryColor": "#1B49AC",
+  "elements": [
+    {
+      "uid": 46,
+      "visible": true,
+      "localName": "LineText",
+      "text": "DIGITAL",
+      "font": "PingFang SC",
+      "fontStyle": {
+        "bold": true,
+        "italic": true,
+        "whiten": false
+      },
+      "fontSize": 35,
+      "x": 50,
+      "y": 57,
+      "rotation": 50
+    },
+    {
+      "uid": 45,
+      "visible": true,
+      "localName": "LineText",
+      "text": "SEAL",
+      "font": "PingFang SC",
+      "fontStyle": {
+        "bold": true,
+        "italic": true,
+        "whiten": false
+      },
+      "fontSize": 35,
+      "x": 50,
+      "y": 46,
+      "rotation": 50
+    },
+    {
+      "uid": 44,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "Est.20XX",
+      "font": "PingFang SC",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 22,
+      "letterSpacing": 23,
+      "radius": 62,
+      "rotation": 19,
+      "invert": true
+    },
+    {
+      "uid": 43,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "CORPORATE SEAL",
+      "font": "PingFang SC",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 30,
+      "letterSpacing": 51,
+      "radius": 56,
+      "rotation": 73,
+      "invert": false
+    },
+    {
+      "uid": 42,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆",
+      "font": "Times New Roman",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": true
+      },
+      "fontSize": 42,
+      "letterSpacing": 100,
+      "radius": 76,
+      "rotation": 9,
+      "invert": false
+    },
+    {
+      "uid": 41,
+      "visible": true,
+      "localName": "Circle",
+      "size": 80,
+      "strokeWidth": 20,
+      "lineBreak": 0
+    },
+    {
+      "uid": 40,
+      "visible": true,
+      "localName": "BadgeStar",
+      "size": 91,
+      "strokeWidth": 18,
+      "lineBreak": 0
+    },
+    {
+      "uid": 39,
+      "visible": true,
+      "localName": "BadgeStar",
+      "size": 100,
+      "strokeWidth": 2,
+      "lineBreak": 0
+    }
+  ]
+}

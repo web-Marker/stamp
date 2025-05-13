@@ -1,0 +1,63 @@
+{
+  "primaryColor": "#1B49AC",
+  "elements": [
+    {
+      "uid": 49,
+      "visible": true,
+      "localName": "LineText",
+      "text": "★",
+      "font": "Arial",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 100,
+      "x": 50,
+      "y": 56,
+      "rotation": 50
+    },
+    {
+      "uid": 45,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "1092109130",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 10,
+      "letterSpacing": 16,
+      "radius": 71,
+      "rotation": 16,
+      "invert": true
+    },
+    {
+      "uid": 47,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "YOUR COMPANY NAME",
+      "font": "Arial",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 26,
+      "letterSpacing": 53,
+      "radius": 59,
+      "rotation": 72,
+      "invert": false
+    },
+    {
+      "uid": 48,
+      "visible": true,
+      "localName": "Circle",
+      "size": 80,
+      "strokeWidth": 6,
+      "lineBreak": 0
+    }
+  ]
+}

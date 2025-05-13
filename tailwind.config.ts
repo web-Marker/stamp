@@ -10,7 +10,6 @@ export default {
     './app/app.vue',
     './app/error.vue', // 添加这一行
   ],
-  darkMode: 'class',
 
   plugins: [typography],
 }
