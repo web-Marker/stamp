@@ -5,8 +5,8 @@
       "uid": 46,
       "visible": true,
       "localName": "LineText",
-      "text": "DIGITAL",
-      "font": "PingFang SC",
+      "text": "STAMP TEXT",
+      "font": "Arial",
       "fontStyle": {
         "bold": true,
         "italic": true,
@@ -21,8 +21,8 @@
       "uid": 45,
       "visible": true,
       "localName": "LineText",
-      "text": "SEAL",
-      "font": "PingFang SC",
+      "text": "STAMP TEXT",
+      "font": "Arial",
       "fontStyle": {
         "bold": true,
         "italic": true,
@@ -38,7 +38,7 @@
       "visible": true,
       "localName": "CircularText",
       "text": "Est.20XX",
-      "font": "PingFang SC",
+      "font": "Arial",
       "fontStyle": {
         "bold": false,
         "italic": false,
@@ -54,8 +54,8 @@
       "uid": 43,
       "visible": true,
       "localName": "CircularText",
-      "text": "CORPORATE SEAL",
-      "font": "PingFang SC",
+      "text": "CORPORATE STAMP",
+      "font": "Arial",
       "fontStyle": {
         "bold": false,
         "italic": false,
@@ -72,7 +72,7 @@
       "visible": true,
       "localName": "CircularText",
       "text": "⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆",
-      "font": "Times New Roman",
+      "font": "Arial",
       "fontStyle": {
         "bold": false,
         "italic": false,

@@ -1,12 +1,18 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+:root {
+  --ui-primary: #155dfc;
+}
 
 html {
   font-family: ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
   background-color: #fff;
   color:#000;
 }
+
+

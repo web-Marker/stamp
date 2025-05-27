@@ -5,7 +5,7 @@
       "uid": 51,
       "visible": true,
       "localName": "LineText",
-      "text": "DIGITAL SEAL",
+      "text": "STAMP TEXT",
       "font": "Arial",
       "fontStyle": {
         "bold": false,
@@ -30,7 +30,7 @@
       "visible": true,
       "localName": "CircularText",
       "text": "Your Company Pvt. Ltd.",
-      "font": "PingFang SC",
+      "font": "Arial",
       "fontStyle": {
         "bold": true,
         "italic": false,

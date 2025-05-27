@@ -75,6 +75,12 @@ export default defineNuxtConfig({
       },
     },
   },
+  icon: {
+    customCollections: [{
+      prefix: 'custom',
+      dir: './app/components/editor/img',
+    }],
+  },
   svgoLoader: {
     svgoConfig: {
       plugins: [

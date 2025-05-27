@@ -28,7 +28,7 @@
       "visible": true,
       "localName": "LineText",
       "text": "Date:",
-      "font": "Arial Hebrew",
+      "font": "Arial",
       "fontStyle": {
         "bold": false,
         "italic": true,
@@ -44,7 +44,7 @@
       "visible": true,
       "localName": "LineText",
       "text": "Sign:",
-      "font": "Arial Hebrew",
+      "font": "Arial",
       "fontStyle": {
         "bold": false,
         "italic": true,
