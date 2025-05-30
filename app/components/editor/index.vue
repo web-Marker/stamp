@@ -838,7 +838,6 @@ import SvgQuare from './img/squaref.svg'
 import SvgTrianglef from './img/trianglef.svg'
 import SvgRound from './img/round.svg'
 
-// @ts-ignore
 import { AgingEffect } from './effect'
 import AsyncTask from '@/utils/async-task'
 import { frontDownload } from '@/utils/common'

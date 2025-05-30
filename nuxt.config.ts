@@ -1,6 +1,3 @@
-import { addVitePlugin } from '@nuxt/kit'
-import babel from 'vite-plugin-babel'
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   // https://nuxt.com/modules
@@ -10,25 +7,6 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@element-plus/nuxt',
     'nuxt-svgo-loader',
-    () => {
-      addVitePlugin({
-        ...babel({
-          filter: /\.[jt]s$/,
-          babelConfig: {
-            babelrc: false,
-            configFile: false,
-            plugins: [
-              ['@babel/plugin-proposal-decorators', { version: 'legacy' }],
-              '@babel/plugin-transform-class-properties',
-            ],
-            assumptions: {
-              setPublicClassFields: true,
-            },
-          },
-        }),
-        enforce: undefined, // 确保在esbuild编译ts后执行转换
-      })
-    },
   ],
   // https://devtools.nuxt.com
   devtools: { enabled: true },

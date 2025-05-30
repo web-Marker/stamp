@@ -114,11 +114,11 @@ export abstract class TextElement extends StampElement {
 export function Setting(
   label: string,
   type: SettingType,
-  props?: Record<string, any>
+  props?: Record<string, any>,
 ) {
   return (proto: any, name: string) => {
     const ctor = proto.constructor
-    if (!ctor.hasOwnProperty('settings')) {
+    if (!Object.prototype.hasOwnProperty.call(ctor, 'settings')) {
       ctor.settings = cloneDeep(ctor.settings || [])
     }
     const settings: StampElementSetting[] = ctor.settings
@@ -126,7 +126,8 @@ export function Setting(
     const exsits = settings.find(item => item.name === name)
     if (exsits) {
       Object.assign(exsits, setting)
-    } else {
+    }
+    else {
       settings.push(setting)
     }
   }
@@ -134,7 +135,7 @@ export function Setting(
 
 export function Deprecated(proto: any, name: string) {
   const ctor = proto.constructor
-  if (!ctor.hasOwnProperty('settings')) {
+  if (!Object.prototype.hasOwnProperty.call(ctor, 'settings')) {
     ctor.settings = cloneDeep(ctor.settings || [])
   }
   const settings: StampElementSetting[] = ctor.settings

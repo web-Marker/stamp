@@ -1,0 +1,23 @@
+diff --git a/node_modules/canvas2svg/canvas2svg.js b/node_modules/canvas2svg/canvas2svg.js
+index 0964b39..d115ff9 100644
+--- a/node_modules/canvas2svg/canvas2svg.js
++++ b/node_modules/canvas2svg/canvas2svg.js
+@@ -453,12 +453,12 @@
+     ctx.prototype.__addTransform = function(t) {
+ 
+         //if the current element has siblings, add another group
+-        var parent = this.__closestGroupOrSvg();
+-        if(parent.childNodes.length > 0) {
+-            var group = this.__createElement("g");
+-            parent.appendChild(group);
+-            this.__currentElement = group;
+-        }
++        // var parent = this.__closestGroupOrSvg();
++        // if(parent.childNodes.length > 0) {
++        //     var group = this.__createElement("g");
++        //     parent.appendChild(group);
++        //     this.__currentElement = group;
++        // }
+ 
+         var transform = this.__currentElement.getAttribute("transform");
+         if(transform) {

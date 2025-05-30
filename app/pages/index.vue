@@ -1,4 +1,14 @@
 <script setup lang="ts">
+const editor = useTemplateRef('editor')
+
+const exportTemplate = () => {
+  editor.value!.exportTemplate()
+}
+
+const downloadWithWatermark = () => {
+  editor.value!.exportFreePNG()
+}
+
 // 添加滚动到编辑器的方法
 const scrollToEditor = () => {
   // 直接通过 ID 选择器找到编辑器元素
@@ -55,6 +65,12 @@ const scrollToEditor = () => {
     </div>
 
     <Editor ref="editor" />
+
+    <div class="flex justify-center m-2">
+      <UButton size="lg" @click="exportTemplate">
+        <span class="px-4">Export</span>
+      </UButton>
+    </div>
   </div>
 </template>
 

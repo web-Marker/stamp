@@ -10,7 +10,7 @@
     "generate": "nuxt generate",
     "preview": "npx nuxthub preview",
     "deploy": "npx nuxthub deploy",
-    "postinstall": "nuxt prepare",
+    "postinstall": "nuxt prepare; patch-package",
     "lint": "eslint .",
     "remote": "npx nuxt dev --remote --dotenv .env",
     "remote:test": "npx nuxt dev --remote --dotenv .env.test"
@@ -55,8 +55,11 @@
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.7.5",
+    "@types/p5": "^1.7.6",
     "drizzle-kit": "^0.30.5",
     "eslint": "^9.18.0",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
     "sass-embedded": "^1.86.0",
     "typescript": "^5.7.3",
     "vue-tsc": "^2.2.0",
