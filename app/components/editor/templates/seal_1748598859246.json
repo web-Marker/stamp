@@ -1,0 +1,77 @@
+{
+  "primaryColor": "#1b49ac",
+  "elements": [
+    {
+      "uid": 78,
+      "visible": true,
+      "localName": "LineText",
+      "text": "01. JAN. 2025",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 18,
+      "x": 50,
+      "y": 45,
+      "rotation": 50
+    },
+    {
+      "uid": 77,
+      "visible": true,
+      "localName": "LineText",
+      "text": "ECEIVE",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 32,
+      "x": 50,
+      "y": 55,
+      "rotation": 50
+    },
+    {
+      "uid": 76,
+      "visible": true,
+      "localName": "LineText",
+      "text": "D",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 100,
+      "x": 77,
+      "y": 56,
+      "rotation": 50
+    },
+    {
+      "uid": 75,
+      "visible": true,
+      "localName": "LineText",
+      "text": "R",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 100,
+      "x": 23,
+      "y": 56,
+      "rotation": 50
+    },
+    {
+      "uid": 74,
+      "visible": true,
+      "localName": "Rect",
+      "size": 64,
+      "strokeWidth": 6,
+      "lineBreak": 0
+    }
+  ]
+}

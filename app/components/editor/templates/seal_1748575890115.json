@@ -1,0 +1,117 @@
+{
+  "primaryColor": "#1B49AC",
+  "elements": [
+    {
+      "uid": 15,
+      "visible": true,
+      "localName": "LineText",
+      "text": "VED",
+      "font": "Verdana",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": true
+      },
+      "fontSize": 37,
+      "x": 68,
+      "y": 51,
+      "rotation": 56
+    },
+    {
+      "uid": 14,
+      "visible": true,
+      "localName": "LineText",
+      "text": "APPROVED",
+      "font": "Verdana",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": true
+      },
+      "fontSize": 37,
+      "x": 48,
+      "y": 50,
+      "rotation": 32
+    },
+    {
+      "uid": 13,
+      "visible": true,
+      "localName": "LineText",
+      "text": "APPR",
+      "font": "Verdana",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": true
+      },
+      "fontSize": 37,
+      "x": 27,
+      "y": 51,
+      "rotation": 56
+    },
+    {
+      "uid": 12,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "_Sign_____",
+      "font": "NewsGoth Lt BT",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 25,
+      "letterSpacing": 31,
+      "radius": 56,
+      "rotation": 11,
+      "invert": true
+    },
+    {
+      "uid": 11,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "________Date______",
+      "font": "NewsGoth Lt BT",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 25,
+      "letterSpacing": 64,
+      "radius": 65,
+      "rotation": 58,
+      "invert": false
+    },
+    {
+      "uid": 10,
+      "visible": true,
+      "localName": "Line",
+      "size": 80,
+      "strokeWidth": 53,
+      "lineBreak": 0,
+      "x": 50,
+      "y": 50,
+      "rotation": 32
+    },
+    {
+      "uid": 9,
+      "visible": true,
+      "localName": "Line",
+      "size": 80,
+      "strokeWidth": 52,
+      "lineBreak": 0,
+      "x": 50,
+      "y": 50,
+      "rotation": 56
+    },
+    {
+      "uid": 8,
+      "visible": true,
+      "localName": "Circle",
+      "size": 80,
+      "strokeWidth": 6,
+      "lineBreak": 0
+    }
+  ]
+}

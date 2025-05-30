@@ -44,19 +44,19 @@ export async function getSystemFonts(useCache = true): Promise<string[]> {
   try {
     // 使用 FontFace API 获取可用字体
     // @ts-ignore
-    // if (window.queryLocalFonts) {
-    //   // @ts-ignore
-    //   const availableFonts = await window.queryLocalFonts()
-    //   const fonts = [...new Set(availableFonts.map((font: any) => font.family))] as string[]
-    //   // 存入缓存
-    //   cachedSystemFonts = fonts
-    //   console.log('🚀 ~ getSystemFonts ~ cachedSystemFonts:', cachedSystemFonts)
-    //   return fonts
-    // }
-    // else {
+    if (window.queryLocalFonts) {
+      // @ts-ignore
+      const availableFonts = await window.queryLocalFonts()
+      const fonts = [...new Set(availableFonts.map((font: any) => font.family))] as string[]
+      // 存入缓存
+      cachedSystemFonts = fonts
+      console.log('🚀 ~ getSystemFonts ~ cachedSystemFonts:', cachedSystemFonts)
+      return fonts
+    }
+    else {
     // 降级方案：返回常用字体列表
-    return BASIC_FONTS
-    // }
+      return BASIC_FONTS
+    }
   }
   catch (error) {
     console.error('获取系统字体失败:', error)

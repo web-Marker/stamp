@@ -511,6 +511,7 @@
                   v-if="item.type === 'slider'"
                   v-model="(activeElement as any)[item.name]"
                   v-bind="item.props"
+                  :title="(activeElement as any)[item.name]"
                 />
                 <USelectMenu
                   v-if="item.type === 'font-select'"
@@ -861,10 +862,10 @@ const color = ref('#1b49ac')
 
 const colorPresets = ['#1b49ac', '#ff0000', '#00eeee', '#000000', '#c71585']
 const imagePresets = Object.values(
-  import.meta.glob('./img/*.png', {
+  import.meta.glob('./img/presets/*', {
     eager: true,
     import: 'default',
-    query: '?no-inline',
+    query: '?url&no-inline',
   }),
 ) as string[]
 
@@ -971,6 +972,9 @@ const addElement = (el: StampElement) => {
 
 const addImageElement = async (src: string) => {
   canvasLoading.value = true
+  if (/\.svg(\?.+)?$/.test(src)) {
+    src = await fetch(src).then(res => res.text())
+  }
   const img = await elementCtors.Image.createImage(src).finally(
     () => (canvasLoading.value = false),
   )
@@ -996,6 +1000,9 @@ const removeElement = (el: StampElement, idx: number) => {
     activeElement.value
       = stampElements.value[idx]
         || stampElements.value[stampElements.value.length - 1]
+  }
+  if (el === highlightElement) {
+    highlightElement = null
   }
 }
 
@@ -1168,7 +1175,6 @@ const exportSVG = async (download = true) => {
 // 加载系统字体
 const loadSystemFonts = async () => {
   isLoadingFonts.value = true
-
   systemFonts.value = await getSystemFonts()
   isLoadingFonts.value = false
 }

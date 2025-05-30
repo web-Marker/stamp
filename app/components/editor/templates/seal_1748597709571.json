@@ -1,0 +1,64 @@
+{
+  "primaryColor": "#1B49AC",
+  "elements": [
+    {
+      "uid": 50,
+      "visible": true,
+      "localName": "LineText",
+      "text": "Partner",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": false,
+        "italic": true,
+        "whiten": false
+      },
+      "fontSize": 22,
+      "x": 79,
+      "y": 57,
+      "rotation": 50
+    },
+    {
+      "uid": 49,
+      "visible": true,
+      "localName": "Line",
+      "size": 46,
+      "strokeWidth": 2,
+      "lineBreak": 0,
+      "x": 40,
+      "y": 60,
+      "rotation": 0
+    },
+    {
+      "uid": 48,
+      "visible": true,
+      "localName": "Oval",
+      "size": 90,
+      "strokeWidth": 1,
+      "lineBreak": 0
+    },
+    {
+      "uid": 47,
+      "visible": true,
+      "localName": "LineText",
+      "text": "StampJam Technologies",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 24,
+      "x": 50,
+      "y": 44,
+      "rotation": 50
+    },
+    {
+      "uid": 46,
+      "visible": true,
+      "localName": "Oval",
+      "size": 100,
+      "strokeWidth": 5,
+      "lineBreak": 0
+    }
+  ]
+}

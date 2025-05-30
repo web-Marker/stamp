@@ -11,7 +11,7 @@ export class LineText extends TextElement {
   @Setting('Vertical Position', 'slider', { min: 0, max: 100 })
   y = 50
 
-  @Setting('Start point', 'slider', { min: 0, max: 100 })
+  @Setting('Rotation', 'slider', { min: 0, max: 100 })
   rotation = 50
 
   override render(r: number, g: number, b: number) {

@@ -1,0 +1,105 @@
+{
+  "primaryColor": "#1B49AC",
+  "elements": [
+    {
+      "uid": 40,
+      "visible": true,
+      "localName": "Image",
+      "size": 30,
+      "x": 50,
+      "y": 50,
+      "rotation": 0,
+      "src": "<svg viewBox=\"0 0 250 250\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke=\"#000\"><path stroke-width=\"10.416\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M28 188l-12 21h213l-12-21H28z\"/><path stroke-width=\"20.834\" d=\"M39 191v-88M81 191v-88M122 191v-88M164 191v-88M206 191v-88\"/><path stroke-width=\"10.416\" d=\"M28 68c-2 0-3 2-3 4v29c0 2 1 3 3 3h189c2 0 3-1 3-3V72c0-2-1-4-3-4H28z\"/><path stroke-width=\"13.021\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M18 68h209L123 35z\"/></g></svg>"
+    },
+    {
+      "uid": 33,
+      "visible": true,
+      "localName": "LineText",
+      "text": "STATE",
+      "font": "Arial",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 18,
+      "x": 50,
+      "y": 78,
+      "rotation": 50
+    },
+    {
+      "uid": 34,
+      "visible": true,
+      "localName": "LineText",
+      "text": "EST.20XX",
+      "font": "Arial",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 18,
+      "x": 50,
+      "y": 21,
+      "rotation": 50
+    },
+    {
+      "uid": 35,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "UNINCORPORATED",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 35,
+      "letterSpacing": 33,
+      "radius": 80,
+      "rotation": 24,
+      "invert": true
+    },
+    {
+      "uid": 36,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "COMPANY NAME",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 35,
+      "letterSpacing": 50,
+      "radius": 76,
+      "rotation": 73,
+      "invert": false
+    },
+    {
+      "uid": 37,
+      "visible": true,
+      "localName": "Circle",
+      "size": 52,
+      "strokeWidth": 2,
+      "lineBreak": 0
+    },
+    {
+      "uid": 38,
+      "visible": true,
+      "localName": "Circle",
+      "size": 92,
+      "strokeWidth": 2,
+      "lineBreak": 0
+    },
+    {
+      "uid": 39,
+      "visible": true,
+      "localName": "Circle",
+      "size": 100,
+      "strokeWidth": 15,
+      "lineBreak": 98
+    }
+  ]
+}

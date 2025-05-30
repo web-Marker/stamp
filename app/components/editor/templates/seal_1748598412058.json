@@ -1,0 +1,61 @@
+{
+  "primaryColor": "#dd4646",
+  "elements": [
+    {
+      "uid": 65,
+      "visible": true,
+      "localName": "LineText",
+      "text": "",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": true
+      },
+      "fontSize": 30,
+      "x": 50,
+      "y": 69,
+      "rotation": 50
+    },
+    {
+      "uid": 64,
+      "visible": true,
+      "localName": "LineText",
+      "text": "",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": true
+      },
+      "fontSize": 30,
+      "x": 50,
+      "y": 32,
+      "rotation": 67
+    },
+    {
+      "uid": 63,
+      "visible": true,
+      "localName": "LineText",
+      "text": "",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": true
+      },
+      "fontSize": 30,
+      "x": 50,
+      "y": 32,
+      "rotation": 33
+    },
+    {
+      "uid": 62,
+      "visible": true,
+      "localName": "Triangle",
+      "size": 79,
+      "strokeWidth": 47,
+      "lineBreak": 0
+    }
+  ]
+}
