@@ -858,7 +858,6 @@ interface StampConfig {
 interface StampTemplate extends StampConfig {
   elements: object[]
 }
-const color = ref('#1b49ac')
 
 const colorPresets = ['#1b49ac', '#ff0000', '#00eeee', '#000000', '#c71585']
 const imagePresets = Object.values(
@@ -887,9 +886,13 @@ const canvasLoading = ref(false)
 const mainCanvas = ref<HTMLCanvasElement | null>(null)
 let mainCtx: CanvasRenderingContext2D
 let watermarkCanvas: HTMLCanvasElement | undefined
+let watermarkCanvas2: HTMLCanvasElement | undefined
 let p5Renderer: Renderer
 let c2sTask: AsyncTask | undefined // canvas-to-svg task
 let _drawingContext: any
+
+let downloadCanvas: HTMLCanvasElement
+let downloadCtx: CanvasRenderingContext2D
 
 const systemFonts = ref(getBasicFonts())
 const isLoadingFonts = ref(false)
@@ -1032,9 +1035,11 @@ const initSketch = () => {
     textAlign(CENTER)
     rectMode(CENTER)
     const canvas = mainCanvas.value!
-    canvas.width = p5Renderer.elt.width
-    canvas.height = p5Renderer.elt.height
+    downloadCanvas = document.createElement('canvas')
+    canvas.width = downloadCanvas.width = p5Renderer.elt.width
+    canvas.height = downloadCanvas.height = p5Renderer.elt.height
     mainCtx = canvas.getContext('2d')!
+    downloadCtx = downloadCanvas.getContext('2d')!
     _drawingContext = drawingContext
   }
   window.draw = () => {
@@ -1118,7 +1123,7 @@ const canvas2svg = async () => {
   return ctx.getSerializedSvg() as string
 }
 
-// 添加水印的方法
+// 编辑时的文字水印
 const watermark = () => {
   const canvas = document.createElement('canvas'),
     W = CANVAS_SIZE * pixelDensity(),
@@ -1149,8 +1154,38 @@ const watermark = () => {
   return canvas
 }
 
+// 免费下载时的马赛克水印
+const watermark2 = () => {
+  const canvas = document.createElement('canvas'),
+    H = CANVAS_SIZE * pixelDensity(),
+    W = H / 2,
+    w = ~~(H / 25)
+  canvas.width = W
+  canvas.height = H
+  const ctx = canvas.getContext('2d')!
+  // 设置水印样式
+  // ctx.globalAlpha = 0.85 // 水印透明度
+  // ctx.fillStyle = stampConfig.primaryColor
+
+  // 绘制水印网格
+  for (let i = 0, x = Math.ceil(W / w); i < x; i++) {
+    for (let j = 0, y = Math.ceil(H / w); j < y; j++) {
+      if ((i + j) % 2) {
+        ctx.fillRect(i * w, j * w, w, w)
+      }
+    }
+  }
+  return canvas
+}
+
 const exportFreePNG = (download = true) => {
-  const dataURL = mainCanvas.value!.toDataURL('image/png')
+  downloadCtx.clearRect(0, 0, downloadCanvas.width, downloadCanvas.height)
+  downloadCtx.drawImage(p5Renderer.elt, 0, 0)
+  if (!watermarkCanvas2) {
+    watermarkCanvas2 = watermark2()
+  }
+  downloadCtx.drawImage(watermarkCanvas2, 0, 0)
+  const dataURL = downloadCanvas.toDataURL('image/png')
   download && frontDownload(dataURL, 'stamp')
   return dataURL
 }
