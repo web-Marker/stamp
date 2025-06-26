@@ -5,14 +5,14 @@ import { Canvg, type Element } from 'canvg'
 
 const changeCanvgColor = (el: Element, color: string) => {
   let changed = false
-  ;['fill', 'stroke'].forEach(attr => {
+  ;['fill', 'stroke'].forEach((attr) => {
     const property = el.getAttribute(attr)
     if (property.hasValue() && property.getValue() !== 'none') {
       property.setValue(color)
       changed = true
     }
   })
-  el.children.forEach(child => {
+  el.children.forEach((child) => {
     const _changed = changeCanvgColor(child, color)
     changed = changed || _changed
   })
@@ -30,11 +30,11 @@ export class Image extends StampElement {
       result = new Promise((resolve, reject) => {
         loadImage(
           src,
-          img => {
+          (img) => {
             this.cache.set(src, img)
             resolve(img)
           },
-          reject
+          reject,
         )
       })
       this.cache.set(src, result)
@@ -53,7 +53,7 @@ export class Image extends StampElement {
     super()
     Object.defineProperty(this, 'src', {
       get: () => src,
-      set: value => {
+      set: (value) => {
         src = value
         if (this.isSVG) {
           const canvg = Canvg.fromString(drawingContext, this.src)
@@ -70,7 +70,7 @@ export class Image extends StampElement {
 
   private getCanvg = () => null as null | Canvg
 
-  @Setting('Size', 'slider', { min: 1, max: 100 })
+  @Setting('Size', 'slider', { min: 1, max: 150 })
   size = 30
 
   @Setting('Horizontal Position', 'slider', { min: 0, max: 100 })
@@ -104,7 +104,7 @@ export class Image extends StampElement {
       ((this.x - 50) / 1) * 3.8,
       ((this.y - 50) / 1) * 3.8,
       3.8 * this.size,
-      3.8 * this.size * (imgObj.height / imgObj.width)
+      3.8 * this.size * (imgObj.height / imgObj.width),
     )
     imgObj.loadPixels()
     changeImgColor(imgObj.pixels, imgObj.width, imgObj.height, r, g, b)
