@@ -9,7 +9,7 @@ export default {
     './app/plugins/**/*.{js,ts}',
     './app/app.vue',
     './app/error.vue', // 添加这一行
+    './content/**/*.md', // 添加内容文件
   ],
-
   plugins: [typography],
 }

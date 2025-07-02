@@ -50,7 +50,6 @@ export async function getSystemFonts(useCache = true): Promise<string[]> {
       const fonts = [...new Set(availableFonts.map((font: any) => font.family))] as string[]
       // 存入缓存
       cachedSystemFonts = fonts
-      console.log('🚀 ~ getSystemFonts ~ cachedSystemFonts:', cachedSystemFonts)
       return fonts
     }
     else {

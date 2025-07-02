@@ -11,4 +11,5 @@ export default withNuxt().overrideRules({
   '@typescript-eslint/no-unused-expressions': 0,
   '@stylistic/lines-between-class-members': 0,
   '@stylistic/brace-style': 0,
+  'vue/no-multiple-template-root': 0,
 })

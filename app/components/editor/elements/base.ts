@@ -67,7 +67,7 @@ export abstract class StampElement {
 export abstract class ShapeElement extends StampElement {
   static override as = ElementAs.Shape
 
-  @Setting('Size', 'slider', { min: 1, max: 100 })
+  @Setting('Size', 'slider', { min: 1, max: 150 })
   size = 80
 
   @Setting('Stroke-width', 'slider', { min: 1, max: 100 })
