@@ -1028,7 +1028,7 @@ const reset = async () => {
 }
 
 // p5.js sketch
-const initSketch = () => {
+const initSketch = (onSetup?: () => void) => {
   window.setup = () => {
     p5Renderer = createCanvas(CANVAS_SIZE, CANVAS_SIZE)
     p5Renderer.elt.remove()
@@ -1041,6 +1041,7 @@ const initSketch = () => {
     mainCtx = canvas.getContext('2d')!
     downloadCtx = downloadCanvas.getContext('2d')!
     _drawingContext = drawingContext
+    onSetup?.()
   }
   window.draw = () => {
     clear(), noFill()
@@ -1067,14 +1068,14 @@ const initSketch = () => {
 }
 
 onMounted(() => {
-  initSketch()
+  initSketch(() => {
+    if (!loadTemplateFromStorage()) {
+      const t = Object.values(templates)[0]
+      t && loadTemplate(t)
+    }
+    activeElement.value = stampElements.value[0]
+  })
   loadSystemFonts()
-
-  if (!loadTemplateFromStorage()) {
-    const t = Object.values(templates)[0]
-    t && loadTemplate(t)
-  }
-  activeElement.value = stampElements.value[0]
 })
 
 onBeforeUnmount(() => {
