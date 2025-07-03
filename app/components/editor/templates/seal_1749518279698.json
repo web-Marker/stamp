@@ -1,0 +1,94 @@
+{
+  "primaryColor": "#1b49ac",
+  "elements": [
+    {
+      "uid": 10,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "By John Smith",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 32,
+      "letterSpacing": 34,
+      "radius": 90,
+      "rotation": 25,
+      "invert": true
+    },
+    {
+      "uid": 9,
+      "visible": true,
+      "localName": "LineText",
+      "text": "1 JAN 2025",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 31,
+      "x": 50,
+      "y": 66,
+      "rotation": 50
+    },
+    {
+      "uid": 8,
+      "visible": true,
+      "localName": "LineText",
+      "text": "RECEIVED",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 49,
+      "x": 50,
+      "y": 51,
+      "rotation": 50
+    },
+    {
+      "uid": 7,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "StampDy Company LLC",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 35,
+      "letterSpacing": 52,
+      "radius": 89,
+      "rotation": 72,
+      "invert": false
+    },
+    {
+      "uid": 6,
+      "visible": true,
+      "localName": "Circle",
+      "size": 81,
+      "strokeWidth": 6,
+      "lineBreak": 0
+    },
+    {
+      "uid": 5,
+      "visible": true,
+      "localName": "Circle",
+      "size": 108,
+      "strokeWidth": 6,
+      "lineBreak": 0
+    }
+  ],
+  "scale": 1.2,
+  "stampType": "Stamp received",
+  "shape": "circle",
+  "id": "seal_1749518279698",
+  "alt":"stamp mockup №8279698, type: stamp received",
+  "name": "Digital Seal Design Maker with Border and Date - №8279698",
+  "title":"Online seal design with bordered layout and date field"
+}

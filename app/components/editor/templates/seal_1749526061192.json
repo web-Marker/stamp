@@ -1,0 +1,77 @@
+{
+  "primaryColor": "#ac1b1b",
+  "elements": [
+    {
+      "uid": 70,
+      "visible": true,
+      "localName": "LineText",
+      "text": "APPROVED",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 35,
+      "x": 50,
+      "y": 57,
+      "rotation": 50
+    },
+    {
+      "uid": 69,
+      "visible": true,
+      "localName": "LineText",
+      "text": "LOAN",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 35,
+      "x": 50,
+      "y": 43,
+      "rotation": 50
+    },
+    {
+      "uid": 68,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "SPEED CREDIT PTE . LTD .",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 32,
+      "letterSpacing": 100,
+      "radius": 86,
+      "rotation": 73,
+      "invert": false
+    },
+    {
+      "uid": 67,
+      "visible": true,
+      "localName": "Circle",
+      "size": 80,
+      "strokeWidth": 4,
+      "lineBreak": 0
+    },
+    {
+      "uid": 66,
+      "visible": true,
+      "localName": "Circle",
+      "size": 103,
+      "strokeWidth": 4,
+      "lineBreak": 0
+    }
+  ],
+  "scale": 1.2,
+  "stampType": "Red stamp",
+  "shape": "circle",
+  "id": "seal_1749526061192",
+  "alt":"stamp mockup №61192, type: red stamp",
+  "name": "Round Rubber Stamp Template - №61192",
+  "title":"Circular rubber stamp design for professional use"
+}

@@ -1,0 +1,514 @@
+{
+  "nav":{
+    "Home": "Home",
+    "StampMaker": "Stamp Maker",
+    "StampTemplates": "Stamp Templates",
+    "Blog": "Blog",
+    "PDFEditor": "PDF Editor"
+  },
+  "index":{
+    "seo": {
+      "title": "Create Custom Stamps Online ｜ Free Stamp Maker Tool - Stampdy",
+      "description": "Design and download custom rubber stamps, company seals, and logos instantly with Stampdy. Use our free online stamp maker — no design skills required"
+    },
+    "hero": {
+      "title": "Free Online Stamp Maker Create — ",
+      "brandName": "StampDy",
+      "subtitle": {
+        "mobile": "Free online stamp maker, create professional-quality stamps in minutes. No registration required.",
+        "desktop": "Design professional-quality stamps in minutes with our free online stamp maker. No registration required. Create personalized rubber stamps, signature stamps, and custom business stamps for any occasion."
+      },
+      "cta": {
+        "tryStamp": "Try Making Stamp",
+        "tryFree": "Try for FREE"
+      }
+    },
+    "stampTypes": [
+      "India seals",
+      "Company seals", 
+      "Design seals",
+      "Custom stamps",
+      "Bank stamps",
+      "Medical stamps",
+      "Businness stamps",
+      "Wedding stamps",
+      "Justice stamps",
+      "Notary stamps",
+      "Library seal",
+      "Rubber Stamp",
+      "Government seal",
+      "Corporate stamps",
+      "Stamp received",
+      "School stamp",
+      "Text stamp",
+      "Date stamp",
+      "Logo stamp",
+      "Red stamp",
+      "Square seal",
+      "Chinese seal",
+      "Deposit only stamp",
+      "Address stamp"
+    ],
+    "sections": {
+      "designOnline": {
+        "title": "📝 Design Your Stamp Online — Fast, Easy, and Free with StampDy",
+        "paragraph1": "Looking for a simple, powerful, and free way to <a href=\"https://stampdy.com/blog/stamp-maker-online\" class=\"hover:underline text-blue-500\">make stamps online</a>?",
+        "paragraph2": "Welcome to StampDy — your all-in-one stamp maker built for modern users. Whether you're a small business owner, a freelancer, a teacher, a notary, or just someone planning a special event, StampDy helps you design and download high-quality custom stamps right from your browser.",
+        "paragraph3": "Forget outdated software and expensive designers. With StampDy's online <a href=\"https://stampdy.com/stamp-maker\" class=\"hover:underline text-blue-500\">stamp maker</a>, everything happens in one smooth, interactive editor — no installs, no technical skills required."
+      },
+      "whyCreateOnline": {
+        "title": "✅ Why Create a Stamp Online Today?",
+        "paragraph1": "The way we work has changed. We now send contracts digitally, shop from our phones, and design business cards in the cloud. So why are people still going to print shops to design stamps?",
+        "paragraph2": "StampDy brings the entire stamp design process online — making it faster, cheaper, and far more flexible. No waiting, no back-and-forth. You're in control.",
+        "paragraph3": "With our stamp generator online, you can:",
+        "features": [
+          "Create stamps anytime, 24/7 — from desktop or mobile",
+          "Customize shape, text, logo, and size with full control",
+          "See real-time previews as you edit",
+          "Export in the format you need: SVG, PNG, PDF, or DOCX",
+          "Download and use your custom stamp instantly"
+        ],
+        "paragraph4": "Whether you need a rubber seal maker, a business stamp generator, or a personal monogram stamp, StampDy is the easiest way to bring your idea to life."
+      },
+      "whatCanYouDo": {
+        "title": "🧰 What Can You Do with StampDy?",
+        "paragraph1": "StampDy is a professional-grade yet beginner-friendly online stamp maker built for real-world needs. Whether you're creating a company seal, a signature stamp, or a wedding monogram, our stamp generator online gives you the freedom to bring your idea to life in just minutes.",
+        "paragraph2": "Here's what you can do with StampDy:",
+        "features": [
+          "✔️ Design stamps in various shapes — round, rectangular, oval, or triangle",
+          "✔️ Add custom text: company name, address, date, or any personal message",
+          "✔️ Upload logos or icons to create a branded rubber stamp",
+          "✔️ Adjust font styles, size, spacing, rotation, and alignment",
+          "✔️ Customize borders and frames with flexible styling options",
+          "✔️ Choose from multiple ink colors (for visual reference)",
+          "✔️ Export your final design in SVG, PNG, PDF, or DOCX formats",
+          "✔️ Save projects and edit later — your work is auto-saved in your browser"
+        ],
+        "paragraph3": "Whether you're looking for an online rubber stamp creator for professional or personal use, StampDy gives you the tools and flexibility you need — no design background required."
+      },
+      "howToCreate": {
+        "title": "🛠️ How to Create Your Stamp Online with StampDy",
+        "paragraph1": "Creating a custom stamp with StampDy is as easy as typing your name. Our intuitive stamp maker online free lets anyone build a stamp design in just a few simple steps.",
+        "steps": [
+          {
+            "title": "1. Choose Your Stamp Shape",
+            "description": "Start by selecting the shape of your stamp — circle, rectangle, triangle, or oval. Each shape supports different layout needs and looks."
+          },
+          {
+            "title": "2. Set the Size",
+            "description": "Define your stamp dimensions (diameter or width & height) — the editor will reflect this in real-time."
+          },
+          {
+            "title": "3. Add Text",
+            "description": "Enter your custom text. You can add text along the inner or outer frame, or place it in the center. All text elements can be resized, rotated, and aligned."
+          },
+          {
+            "title": "4. Upload a Logo or Image",
+            "description": "Want to include a logo, icon, or signature? Simply upload an SVG image and position it where you want. You can also choose from our gallery of default symbols."
+          },
+          {
+            "title": "5. Customize Styling",
+            "description": "Play with fonts, colors, borders, line breaks, spacing, and more. With StampDy, you get pixel-level precision."
+          },
+          {
+            "title": "6. Preview and Save",
+            "description": "Check the real-time preview and make edits until you're satisfied. You can save the design and come back to it anytime."
+          },
+          {
+            "title": "7. Export Your Stamp",
+            "description": "Download your stamp in multiple file formats — perfect for digital use or for production at a print shop."
+          }
+        ]
+      },
+      "templatesPersonalization": {
+        "title": "🎨 Templates & Personalization",
+        "paragraph1": "Not sure where to start? StampDy offers a growing collection of ready-to-edit <a href=\"https://stampdy.com/stamp-template\" class=\"hover:underline text-blue-500\">stamp templates</a> — perfect for saving time and getting inspired.",
+        "paragraph2": "From official business seals to decorative wedding stamps, our templates are fully customizable. Whether you're creating a medical stamp, notary stamp, education stamp, or just a unique personal design, you'll find layouts that fit.",
+        "paragraph3": "You can:",
+        "features": [
+          "Select a base template and simply edit the text and logo",
+          "Customize font style, spacing, and alignment",
+          "Add your own graphics or choose from icon categories like law, food, medicine, and more",
+          "Preview everything live before downloading"
+        ],
+        "paragraph4": "Our online rubber stamp creator makes it easy to go from template to final design — with no need to start from scratch."
+      },
+      "downloadUse": {
+        "title": "💾 Download and Use Anywhere",
+        "paragraph1": "Once your stamp is ready, you can download it instantly in any of these formats:",
+        "formats": [
+          {
+            "type": "SVG",
+            "description": "great for professional production and vector editing"
+          },
+          {
+            "type": "PNG", 
+            "description": "ideal for websites, emails, and lightweight use"
+          },
+          {
+            "type": "PDF",
+            "description": "perfect for attaching to official documents"
+          },
+          {
+            "type": "DOCX",
+            "description": "easy for inserting into Word files or reports"
+          }
+        ],
+        "paragraph2": "Whether you're using your design digitally or sending it to a stamp manufacturer, StampDy ensures that you have the right format at your fingertips.",
+        "paragraph3": "Need a stamp generator online that works across devices? Our platform is 100% browser-based, mobile-friendly, and doesn't require installation."
+      }
+    },
+    "mobileContent": {
+      "title": "📝 Make Custom Stamps Online — Fast & Easy with StampDy",
+      "paragraph1": "Need a simple, fast way to <a href=\"https://stampdy.com/blog/stamp-maker-online\" class=\"hover:underline text-blue-500\">make stamps online</a>? You're in the right place.",
+      "paragraph2": "StampDy is your friendly stamp maker — whether you're a freelancer, small biz owner, teacher, or planning an event. No software. No design skills. Just tap, type, and go.",
+      "templatesSection": {
+        "title": "🎨 Choose from Templates or Create Your Own",
+        "paragraph1": "Not sure where to start? We offer editable <a href=\"https://stampdy.com/stamp-template\" class=\"hover:underline text-blue-500\">stamp templates</a> to help you hit the ground running.",
+        "paragraph2": "Customize fonts, upload your logo, adjust spacing — it's all live and mobile-friendly."
+      },
+      "featuresSection": {
+        "title": "⚙️ What You Can Do with StampDy",
+        "features": [
+          "Create stamps anytime, anywhere — mobile-ready",
+          "Edit shapes: round, square, triangle, oval",
+          "Add logos, custom text, adjust fonts and borders",
+          "See real-time previews as you work",
+          "Export to SVG, PNG, PDF, DOCX",
+          "Save and re-edit anytime in your browser"
+        ],
+        "paragraph": "Whether for business or personal use, our <strong>stamp generator online</strong> makes it simple and smooth."
+      },
+      "mobileDesign": {
+        "title": "📲 Designed for Mobile, Built for You",
+        "paragraph": "No app needed. Just open StampDy in your browser and start creating. Our <strong>online rubber stamp creator</strong> works seamlessly on all devices."
+      },
+      "howItWorks": {
+        "title": "💡 How It Works",
+        "steps": [
+          "Pick a shape: circle, rectangle, oval, or triangle",
+          "Set size & dimensions", 
+          "Type your text — inner, outer, or center layout",
+          "Upload a logo or pick a built-in symbol",
+          "Style it: fonts, borders, alignment, colors",
+          "Preview and save anytime",
+          "Download your stamp — ready to use!"
+        ]
+      },
+      "instantDownload": {
+        "title": "📥 Instant Download",
+        "formats": [
+          {
+            "type": "SVG",
+            "description": "scalable & engraver-ready"
+          },
+          {
+            "type": "PNG",
+            "description": "high-res with transparent background"
+          },
+          {
+            "type": "PDF", 
+            "description": "perfect for official documents"
+          },
+          {
+            "type": "DOCX",
+            "description": "insert easily into Word"
+          }
+        ],
+        "paragraph": "From digital use to stamp manufacturing, StampDy gives you all the formats you need in one place."
+      },
+      "tryStampdy": {
+        "title": "🚀 Try StampDy Today",
+        "paragraph1": "Thousands use our <strong>stamp maker</strong> every day to design beautiful, professional stamps in minutes.",
+        "paragraph2": "👉 Tap below and start creating — no login required."
+      }
+    },
+    "testimonials": {
+      "title": "Design your stamp online in minutes — no hassle.",
+      "features": [
+        "Just choose a template, type in your details, and tweak it to your liking.",
+        "Our stamp maker lets you add logos, adjust fonts, and see changes live.",
+        "Download in SVG, PNG, PDF, or DOCX — perfect for any use.",
+        "Whether it's for business or personal use, our stamp generator online makes it fast and easy."
+      ]
+    },
+    "faq": {
+      "title": "❓ Frequently Asked Questions — All About Creating Your Stamp Online",
+      "q1": {
+        "question": "What does it mean to \"make a stamp online\"?",
+        "answer": "Making a stamp online simply means designing your custom stamp layout using a digital tool—like the one on <a href=\"https://stampdy.com\" class=\"hover:underline text-blue-500\">stampdy.com</a>—without needing graphic software or visiting a store. With our stamp maker online free, you can customize shapes, add text, logos, and download your stamp instantly in SVG or PNG."
+      },
+      "q2": {
+        "question": "What can I use an online stamp for?",
+        "answer": "You can use an online stamp for all sorts of things—signing documents, marking books, creating packaging labels, or even for branding your business. Whether it's a personal project or something official, a digital stamp can save you time and give your materials a professional touch."
+      },
+      "q3": {
+        "question": "How do I create a rubber stamp online?",
+        "answer": "Just head over to <a href=\"https://stampdy.com\" class=\"hover:underline text-blue-500\">stampdy.com</a> and use our intuitive stamp generator online. Choose your shape (round, square, etc.), type in your text, adjust fonts, add a logo if needed—and your stamp layout is ready to download. You can then send it to any print shop or manufacturer to produce your physical rubber stamp."
+      },
+      "q4": {
+        "question": "Is your stamp maker online free?",
+        "answer": "Our stamp maker online is free to use when it comes to designing and editing your custom stamp. You can explore templates, add text, and customize everything without paying a cent. When you're ready to download a high-resolution, watermark-free version, a small fee applies — but there are no hidden charges, and you only pay when you're happy with the result."
+      },
+      "q5": {
+        "question": "Can I create a company seal using your online seal maker?",
+        "answer": "Absolutely! Our seal maker lets you design official-looking company seals quickly. You can enter your business name, registration number, and even upload your company logo. With precise alignment tools, your seal is ready to print or emboss in just a few clicks."
+      },
+      "q6": {
+        "question": "How much does it cost to make a physical rubber stamp?",
+        "answer": "Designing your layout on StampDy is free. For physical production, prices usually range between $10–$25 depending on the material (plastic, wood, metal) and size. Some vendors may offer bulk discounts or free shipping. You just take your downloaded design and send it to the manufacturer you prefer."
+      },
+      "q7": {
+        "question": "Where can I get my stamp printed after designing it online?",
+        "answer": "Once you download your design from StampDy, you can take it to any local print shop or order from an online rubber stamp creator. Our files are fully compatible with all major printing systems globally. You're not locked into any single provider."
+      },
+      "q8": {
+        "question": "How can I make a round stamp design?",
+        "answer": "Round stamps are the most popular for company seals and personal monograms. On StampDy, just choose the round template, enter your text around the edges, pick a center logo or icon, and adjust font size, spacing, and alignment. The online stamp maker gives you real-time previews as you customize."
+      },
+      "q9": {
+        "question": "Is it possible to add logos or custom images to my stamp?",
+        "answer": "Yes! Our stamp generator online supports adding SVG images, which means you can upload your brand logo or any custom graphic. This is perfect for businesses, schools, and personal stamps with a unique touch."
+      },
+      "q10": {
+        "question": "Can I edit my stamp after downloading it?",
+        "answer": "You can keep tweaking your design as long as you want before downloading. After downloading, if you realize you want to change something, just re-upload the file to StampDy or start a new one. Editing is fast and free."
+      },
+      "q11": {
+        "question": "Is this tool suitable for official government or corporate seals?",
+        "answer": "Yes. Our seal maker tool has been used by small businesses, government offices, and even law firms. You can add required info like registration numbers, legal text, and follow official layout conventions. Your seal will be accurate and professional."
+      },
+      "q12": {
+        "question": "Can I make a triangle or square-shaped stamp?",
+        "answer": "Definitely. While most people go for round stamps, our online stamp maker also offers square, rectangle, and triangle shapes. You can fully customize the frame, text, and even combine shapes creatively for a unique layout."
+      },
+      "q13": {
+        "question": "What file formats can I download my stamp in?",
+        "answer": "You can download your stamp design in PNG, SVG, PDF, or even DOCX formats. Whether you want to print, use it digitally, or insert it into a Word document, we've got you covered."
+      },
+      "q14": {
+        "question": "Will my stamp have a watermark?",
+        "answer": "Nope. Your final downloaded file will be completely clean—no StampDy logos or watermarks. The design is 100% yours to use for business, personal, or legal purposes."
+      },
+      "q15": {
+        "question": "Can I use my phone to make a stamp online?",
+        "answer": "Yes, StampDy is mobile-friendly. Whether you're on a phone, tablet, or desktop, the tool works smoothly. So even if you're on the go, you can create a stamp online in minutes."
+      },
+      "q16": {
+        "question": "Is creating a digital stamp cheaper than offline services?",
+        "answer": "Absolutely. When you use an online rubber stamp creator like StampDy, you cut out the middleman, skip the travel, and avoid unnecessary design fees. It's not just faster—it's more affordable, especially if you need multiple designs or revisions."
+      },
+      "q17": {
+        "question": "Can I simulate a real rubber stamp look in Word?",
+        "answer": "Yes, many of our users download their stamp in PNG or SVG and paste it directly into Word. You can add shadow or ink-style effects using WordArt for a realistic stamped appearance—great for digital signatures or document approval visuals."
+      }
+    },
+    "ad": {
+      "title": "Design your stamp online in minutes — no hassle.",
+      "features": [
+        "Just choose a template, type in your details, and tweak it to your liking.",
+        "Our stamp maker lets you add logos, adjust fonts, and see changes live.",
+        "Download in SVG, PNG, PDF, or DOCX — perfect for any use.",
+        "Whether it's for business or personal use, our stamp generator online makes it fast and easy."
+      ],
+      "button": "Try for FREE"
+    }
+  },
+  "editor": {
+    "title": "Create your own stamp © stampdy.com",
+    "selectTemplate": "Select Template",
+    "reset": "Reset",
+    "chooseColor": "Choose Color",
+    "addText": "Add Text",
+    "addLogo": "Add Logo",
+    "addImage": "Add Image",
+    "addShape": "Add Shape",
+    "agingEffect": "Aging Effect",
+    "select": "Select",
+    "image": "Image",
+    "shape": "Shape",
+    "text": "Text",
+    "add": "Add",
+    "imageType": "Image Type",
+    "upload": "Upload",
+    "selectElement": "Select Element",
+    "loading": "Loading...",
+    "noElements": "No elements",
+    "addElementsFromLeftToolbar": "Add elements from the left toolbar",
+    "size": "Size",
+    "scrollToSeeMore": "Scroll to see more",
+    "templates": "Templates",
+    "chooseShape": "Choose shape",
+    "backEdit": "Back edit",
+    "back": "Back",
+    "download": "Download",
+    "promo": "PROMO",
+    "highQuality": "High Quality",
+    "transparentBackground": "Transparent background",
+    "hdImages": "HD images",
+    "scalability": "Scalability",
+    "afterPayment": "After payment, the seal will automatically download in the top-right corner of your browser",
+    "alsoDownloadLink": "Also, the download link will be sent to your specified email:",
+    "sample": "Sample",
+    "continue": "Continue",
+    "yourProgressWillBeLost": "Your progress will be lost. Proceed?",
+    "cancel": "Cancel",
+    "proceed": "Proceed",
+    "paymentCancelled": "Payment Cancelled",
+    "yourCurrentDesignHasBeenSaved": "Your current design has been saved and you can return to it anytime.",
+    "yourPaymentWasCancelled": "Your payment was cancelled. You can continue designing your stamp or try again later.",
+    "tryPaymentAgain": "Try Payment Again",
+    "processingPayment": "Processing Payment",
+    "paymentSuccessful": "Payment Successful",
+    "tip1": "We are processing your payment and preparing your stamp files...",
+    "tip2": "This usually takes a few moments. Please don't close this window.",
+    "tip3": "Your payment has been processed successfully!",
+    "tip4": "Your stamp files are ready for download:",
+    "highResolutionPngFile": "High-resolution PNG file",
+    "scalableSvgFormat": "Scalable SVG format",
+    "printReadyPdfDocument": "Print-ready PDF document",
+    "editableDocxFile": "Editable DOCX file",
+    "tip5": "The download should start automatically. If not, click the button below.",
+    "settings": {
+      "Text": "Text",
+      "Font": "Font",
+      "Style": "Style",
+      "Font size": "Font size",
+      "Letter spacing": "Letter spacing",
+      "Radius": "Radius",
+      "Start point": "Start point",
+      "Invert": "Invert",
+      "Size": "Size",
+      "Horizontal Position": "Horizontal Position",
+      "Vertical Position": "Vertical Position",
+      "Rotation": "Rotation"
+    },
+    "yourEmail": "Your email",
+    "selectImageType": "Select image type"
+  },
+  "stampMaker": {
+    "seo":{
+      "title":"Online Stamp Maker – Design Custom Stamps Instantly ｜ Stampdy",
+      "description":"Create your own custom stamps online with Stampdy. Add logos, seals, or text directly in your browser — no design skills needed. Fast, easy, and free"
+    },
+    "title": "Online Rubber Stamp Creator Seal Maker Stamp Generator",
+    "description": "Free online stamp maker, create professional-quality stamps in minutes. No registration required.",
+    "desc2":"Create custom rubber stamps online in minutes. Use our free stamp maker to design seals with your logo or text. Easy, fast, and perfect for digital or print use.",
+    "useTemplate": "Use this template",
+    "designYourOwnRubberStamp": "Design Your Own Rubber Stamp Online — Quick, Easy, and Professional",
+    "desc3":"Need a stamp for your business, personal use, or something more official? At Stampdy.com, you can create your own rubber stamp, company seal, or custom design in just a few minutes — no design skills needed, no software to download. Our platform works like a powerful yet easy-to-use <a href=\"https://stampdy.com/stamp-maker\" class=\"hover:underline text-blue-500\">stamp maker</a>, designed for everyone.",
+    "desc4":"Our online rubber stamp creator is made for everyone. Whether you’re a freelancer who needs a quick signature stamp, a small business owner looking to add a logo to your documents, or someone preparing a notary or wedding layout — we’ve got a wide selection of ready-to-edit <a href=\"https://stampdy.com/stamp-template\" class=\"hover:underline text-blue-500\">stamp templates</a> waiting for you.",
+    "simpleToolsPowerfulResults":"Simple Tools, Powerful Results",
+    "desc5":"We’ve made the process super straightforward:",
+    "desc6":"Pick a template you like (round, rectangular, triangle – all available)",
+    "desc7":"Add your text, logo, or details right in your browser",
+    "desc8":"Download it in the format you need — done!",
+    "desc9":"You can export your design in",
+    "desc10":"high-res with transparent background",
+    "desc11":"perfect for engraving or resizing",
+    "desc12":"great for formal docs",
+    "desc13":"ready to drop into Word",
+    "desc14":"Everything is editable, and if you need to pause, you can save your work and come back later.",
+    "whyPeopleAreSwitchingToStampdy":"Why People Are Switching to Stampdy",
+    "desc15":"Unlike other platforms that charge different fees depending on file types or make you jump through hoops just to download, Stampdy keeps it simple — one flat price for everything. No gimmicks. No upsells.",
+    "desc16":"And here’s the best part:",
+    "desc17":"Our $1.99 pricing is the lowest in the industry. Period.",
+    "desc18":"You get full access to every file format, every template, every tool — all for one ultra-low price.",
+    "desc19":"Ready to create your own stamp in minutes? ",
+    "desc20":"Head to stampdy.com and give it a try — your perfect stamp is just a few clicks away.",
+    "whatIsAS":"What Is a Stamp Creator?",
+    "desc21":"A stamp creator is an online tool that lets you design and preview custom stamps directly in your browser — no advanced design software needed. Instead of learning programs like Photoshop or Illustrator, you can simply choose a layout, type your text, add a logo, and see your design come to life in real time.",
+    "desc22":"Most stamp creators support multiple formats like SVG, PNG, or PDF, making them ideal for both digital use and professional production. You can use them to make company seals, notary stamps, address stamps, or even custom artwork. Whether you're designing a logo stamp for branding or creating something personal, tools like these make it fast and accessible.",
+    "desc23":"Some platforms also allow you to customize the stamp body, choose color output (like black, red, or blue), and even simulate how it would look on paper — all before you export the final design. It's one of the most convenient ways to get a high-quality online stamp design maker experience without any hassle.",
+    "whatIsAG":"What Is a Stamp Generator?",
+    "desc24":"A stamp generator is a simplified version of a stamp design tool, often requiring very little user input. You might just select a template, fill in your details, and instantly get a downloadable stamp layout — no design work needed. This makes online stamp generators ideal for users who want quick results without digging into customization.",
+    "desc25":"Unlike advanced stamp makers that let you fine-tune every detail, a stamp generator online streamlines the process. Some even allow free use for basic layouts, giving you access to essential formats like SVG or PNG to print or share instantly.",
+    "desc26":"Although most stamp generator tools focus on digital designs, the exported files can be used with professional manufacturers to make physical stamps — including rubber stamps, seal makers, embossers, or traditional handle stamps. Just send the file to a local print shop, and your custom design is ready to be produced.",
+    "desc27":"So, if you're searching for a stamp maker online free or need a fast solution without the learning curve, a stamp generator might be the perfect fit.",
+    "designRubberStampsOnline":"Design Rubber Stamps Online — Fast & Affordable",
+    "desc28":"Need a custom rubber stamp or company seal? At <strong>Stampdy.com</strong>, you can create one in minutes — no design tools, no downloads.",
+    "desc29":"Our <a href=\"https://stampdy.com/stamp-maker\" class=\"hover:underline text-blue-500\">stamp maker</a> works right in your browser. Just pick a style, type your text, and go.",
+    "desc30":"Use our growing library of <a href=\"https://stampdy.com/stamp-template\" class=\"hover:underline text-blue-500\">stamp templates</a> or start from scratch. Perfect for small businesses, freelancers, and events.",
+    "desc31":"Choose from round, rectangle, or triangle designs",
+    "desc32":"Add text, upload logos, adjust layout in real-time",
+    "desc33":"Export in PNG, SVG, PDF, or DOCX",
+    "simplePricing":"Simple Pricing",
+    "desc34":"No complicated tiers or hidden fees. You get all formats and full features for just:",
+    "desc35":"$1.99 — the lowest price online.",
+    "desc36":"Start creating with our <strong>online rubber stamp creator</strong> — no login needed.",
+    "createNow":"Create Now",
+    "frequentlyAskedQuestions":"Frequently Asked Questions",
+    "faq":{
+      "q1":{
+        "question":"Why does my downloaded PNG have a black background?",
+        "answer":"Some devices display transparent PNGs with a black background — but don’t worry, your image is still transparent. Try opening it in apps like Word, Photoshop, or Preview to see it correctly."
+      },
+      "q2":{
+        "question":"Can I change the text or layout after I’ve created a stamp?",
+        "answer":"Absolutely. StampDy lets you edit your design anytime right in your browser. Just head back to the editor, make your changes, and download again — no need to start over."
+      },
+      "q3":{
+        "question":"Where can I use my digital stamp?",
+        "answer":"Anywhere! Our <strong>online stamp maker</strong> is perfect for business branding, personal documents, certificates, classroom use, packaging, and more. Your files come ready for both print and digital use."
+      },
+      "q4":{
+        "question":"How long does it take to make a stamp?",
+        "answer":"With StampDy’s <strong>stamp generator online</strong>, it takes just minutes. Choose a template, customize your design, and download instantly — no login, no waiting."
+      },
+      "q5":{
+        "question":"How much does it cost?",
+        "answer":"Unlike other platforms, we don’t charge extra for different file formats. At StampDy, everything — PNG, SVG, PDF, and DOCX — is just <strong>$1.99</strong> flat. Simple, fair, and transparent pricing."
+      },
+      "q6":{
+        "question":"Can I create a company seal using your online seal maker?",
+        "answer":"Absolutely! Our seal maker lets you design official-looking company seals quickly. You can enter your business name, registration number, and even upload your company logo. With precise alignment tools, your seal is ready to print or emboss in just a few clicks."
+      },
+      "q7":{
+        "question":"What tools or options do I get with the editor?",
+        "answer":"You get full control over your <strong>online stamp design maker</strong>: change shape, text, fonts, spacing, add logos, and more — all in real-time. Everything is mobile-friendly and browser-based."
+      } 
+    }
+
+  },
+  "pdfEditor":{
+    "seo":{
+      "title":"Edit PDFs with Stamps & Signatures Online – Free Tool ｜ Stampdy",
+      "description":"Easily add custom stamps, seals, and digital signatures to your PDF files online. No downloads or registration needed — fast and secure"
+    },
+    "title":"Edit Your PDFs with Stamps, Seals, or Signatures — No Downloads Needed ｜ Stampdy.com",
+    "mobileTitle":"Edit Your PDFs with Stamps, Seals, or Signatures — No Downloads Needed",
+    "desc1":"<b>StampDy.com</b> makes it easy to edit PDF documents online. Whether you're adding a signature to a contract, placing an official seal on a form, or stamping your logo on a document — our free online PDF editor helps you do it in just a few clicks.",
+    "desc2":"You don’t need design skills. You don’t need software. Just upload, edit, and download — all right in your browser.",
+    "openPDFEditor":"Open PDF editor",
+    "howToAddStampsOrSignatures":"How to Add Stamps or Signatures to PDFs",
+    "usingStampdyPDFToolIsSimple":"Using Stampdy’s PDF tool is simple:",
+    "desc3":"Upload your PDF file directly on the site",
+    "desc4":"Choose a stamp or signature — or upload your own",
+    "desc5":"Drag it into place, resize or rotate it as needed",
+    "desc6":"Download the edited PDF",
+    "noRegistrationRequired":"No registration required. No watermarks. No nonsense.",
+    "desc7":"Why Thousands Use Stampdy’s Online PDF Editor",
+    "desc8":"We designed Stampdy to solve the everyday problems people face when editing PDF files — especially when adding custom stamps, seals, or digital signatures. Here's what makes it stand out:",
+    "desc9":"✅ No Installations, Ever",
+    "desc10":"Our tool runs entirely in your browser — no apps, no extensions, no downloads.",
+    "desc11":"Full Privacy & Security",
+    "desc12":"Your PDFs are never uploaded to a server. Editing happens locally on your device. Nothing is saved, nothing is tracked.",
+    "desc13":"Designed for Real Work",
+    "desc14":"From small business owners and lawyers to freelancers and government staff, Stampdy helps users handle everything from invoices to official documents.",
+    "desc15":"Works on Any Device",
+    "desc16":"Mac, Windows, Android, iOS — it doesn’t matter. If you can open a browser, you can use Stampdy.",
+    "desc17":"Clean Interface, Zero Learning Curve",
+    "desc18":"You don’t need to watch tutorials. The process is fast, clear, and frustration-free."
+  },
+  "footer":{
+    "resources":"Resources",
+    "stampMaker":"Stamp Maker",
+    "stampTemplate":"Stamp Template",
+    "privacyPolicy":"Privacy Policy",
+    "userAgreement":"User Agreement",
+    "blog":"Blog",
+    "contactUs":"Contact Us",
+    "support": "Support", 
+    "copyright":"Copyright © 2011-2025 Copying and posting materials on other sites without a link to the resource is prohibited."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "primaryColor": "#1b49ac",
+  "elements": [
+    {
+      "uid": 10,
+      "visible": true,
+      "localName": "LineText",
+      "text": "Date:____________",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 37,
+      "x": 50,
+      "y": 58,
+      "rotation": 50
+    },
+    {
+      "uid": 9,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "Stamp Maker",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 29,
+      "letterSpacing": 37,
+      "radius": 79,
+      "rotation": 80,
+      "invert": false
+    },
+    {
+      "uid": 8,
+      "visible": true,
+      "localName": "Circle",
+      "size": 100,
+      "strokeWidth": 10,
+      "lineBreak": 0
+    },
+    {
+      "uid": 7,
+      "visible": true,
+      "localName": "Circle",
+      "size": 106,
+      "strokeWidth": 6,
+      "lineBreak": 0
+    }
+  ],
+  "scale": 1.1,
+  "stampType": "Bank stamps",
+  "shape": "circle",
+  "id": "seal_1749459587465",
+  "alt":"stamp mockup №9587465, type: bank stamps",
+  "name": "Legal Seal Maker for Documents (Online) - №9587465",
+  "title":"Online legal seal design suitable for official documents"
+}

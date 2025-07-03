@@ -1,0 +1,60 @@
+{
+  "primaryColor": "#1B49AC",
+  "elements": [
+    {
+      "uid": 20,
+      "visible": true,
+      "localName": "LineText",
+      "text": "Company Name",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 26,
+      "x": 50,
+      "y": 62,
+      "rotation": 50
+    },
+    {
+      "uid": 19,
+      "visible": true,
+      "localName": "LineText",
+      "text": "JONATAN",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 35,
+      "x": 49,
+      "y": 53,
+      "rotation": 50
+    },
+    {
+      "uid": 17,
+      "visible": true,
+      "localName": "LineText",
+      "text": "JOHANAT SMITH",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 38,
+      "x": 50,
+      "y": 41,
+      "rotation": 50
+    }
+  ],
+  "scale": 1.3,
+  "stampType": "India seals",
+  "shape": "square",
+  "id": "seal_1749191624331",
+  "alt":"stamp mockup №1624331, type: india seals",
+  "name": "Stamp Maker Online Free for Office Use - №1624331",
+  "title":"Free stamp maker template suitable for office documents"
+}

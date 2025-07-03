@@ -5,7 +5,7 @@
       "uid": 46,
       "visible": true,
       "localName": "LineText",
-      "text": "STAMP TEXT",
+      "text": "DIGITAL",
       "font": "Arial",
       "fontStyle": {
         "bold": true,
@@ -21,7 +21,7 @@
       "uid": 45,
       "visible": true,
       "localName": "LineText",
-      "text": "STAMP TEXT",
+      "text": "SEAL",
       "font": "Arial",
       "fontStyle": {
         "bold": true,

@@ -1,0 +1,68 @@
+{
+  "primaryColor": "#1b49ac",
+  "elements": [
+    {
+      "uid": 27,
+      "visible": true,
+      "localName": "LineText",
+      "text": "Richmond, BC V7X 1A2, Canada",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 25,
+      "x": 50,
+      "y": 65,
+      "rotation": 50
+    },
+    {
+      "uid": 26,
+      "visible": true,
+      "localName": "LineText",
+      "text": "7000 Bewerly Hwy",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 28,
+      "x": 50,
+      "y": 52,
+      "rotation": 50
+    },
+    {
+      "uid": 25,
+      "visible": true,
+      "localName": "LineText",
+      "text": "Richmond Hospital",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 38,
+      "x": 50,
+      "y": 38,
+      "rotation": 50
+    },
+    {
+      "uid": 24,
+      "visible": true,
+      "localName": "Rect",
+      "size": 100,
+      "strokeWidth": 6,
+      "lineBreak": 0
+    }
+  ],
+  "scale": 1.3,
+  "stampType": "Company seals",
+  "shape": "square",
+  "id": "seal_1749367391210",
+  "alt":"stamp mockup №7391210, type: company seals",
+  "name": "Personalized Rubber Stamp Creator for Small Business - №7391210",
+  "title":"Personalized small business rubber stamp template online"
+}

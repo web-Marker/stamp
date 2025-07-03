@@ -1,0 +1,285 @@
+{
+  "primaryColor": "#1B49AC",
+  "elements": [
+    {
+      "uid": 29,
+      "visible": true,
+      "localName": "Line",
+      "size": 100,
+      "strokeWidth": 3,
+      "lineBreak": 0,
+      "x": 50,
+      "y": 41,
+      "rotation": 0
+    },
+    {
+      "uid": 28,
+      "visible": true,
+      "localName": "Image",
+      "size": 111,
+      "x": 50,
+      "y": 51,
+      "rotation": 0,
+      "src": "<svg width=\"250\" height=\"250\" viewBox=\"0 0 250 250\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" id=\"h-o-l-ds\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><g class=\"Img_l\" x=\"55.5\" y=\"149\" s=\"40\" al=\"0\" transform=\"matrix(0.40,0.00,0.00,0.40,5.00,99.00)\" load=\"1\" id=\"Img38\" layer=\"38\"><metadata>Created by potrace 1.16, written by Peter Selinger 2001-2019</metadata><g transform=\"translate(0.000000,120.000000) scale(0.100000,-0.100000)\" fill=\"#1B49AC\" stroke=\"none\"><path d=\"M4765 1071 c-74 -34 -105 -91 -105 -193 l0 -48 -45 0 c-43 0 -45 -1-45 -29 0 -15 -3 -56 -6 -90 l-7 -61 42 0 c38 0 41 -2 41 -27 0 -50 -19 -367-26 -421 l-6 -53 134 3 133 3 8 215 c4 118 10 230 13 248 l5 32 69 0 70 0 090 0 90 -75 0 -75 0 6 28 c4 15 13 34 20 42 15 16 70 19 127 7 l37 -8 0 84 084 -57 12 c-88 17 -211 14 -258 -8z\"></path><path d=\"M3250 1060 c-204 -43 -287 -219 -178 -378 16 -23 76 -82 133 -130145 -122 166 -168 95 -205 -47 -25 -161 -18 -252 16 l-67 24 5 -61 c4 -33 9-83 13 -111 l6 -50 75 -12 c108 -17 276 -16 337 2 123 36 203 131 203 239 -195 -41 151 -203 279 -96 76 -122 112 -108 150 20 53 141 66 254 29 l58 -20 -792 c-3 50 -10 98 -15 107 -4 9 -25 19 -46 23 -69 12 -257 15 -303 6z\"></path><path d=\"M196 803 c-7 -246 -21 -514 -31 -607 l-6 -48 238 4 c258 5 308 14405 71 53 31 129 111 156 163 48 95 69 231 52 339 -24 147 -98 249 -218 297-54 21 -73 23 -323 26 l-266 3 -7 -248z m549 130 c53 -28 89 -68 117 -128 20-43 23 -65 22 -165 0 -95 -4 -125 -23 -173 -34 -88 -77 -137 -151 -175 -79-40 -149 -52 -303 -52 l-117 0 5 93 c8 140 25 530 25 582 l0 47 193 -4 c174-3 196 -5 232 -25z\"></path><path d=\"M1965 956 l-50 -11 -3 -63 -3 -62 -44 0 c-41 0 -45 -2 -45 -24 0 -13-3 -31 -6 -40 -5 -13 2 -16 40 -16 37 0 46 -3 46 -17 0 -10 -5 -119 -11 -243-13 -255 -9 -282 53 -320 28 -18 46 -21 125 -18 50 2 95 6 98 10 4 4 11 25 1547 l7 41 -72 -7 c-70 -6 -72 -5 -94 23 -23 29 -23 30 -17 249 4 120 10 223 12227 3 4 45 8 95 8 l89 0 0 40 0 40 -90 0 -89 0 -3 73 -3 73 -50 -10z\"></path><path d=\"M1365 833 c-70 -8 -151 -26 -162 -35 -12 -10 -19 -78 -8 -78 3 0 399 81 21 101 28 240 25 274 -6 34 -31 42 -61 26 -99 -17 -41 -55 -59 -198 -97-224 -59 -278 -103 -278 -227 0 -115 64 -165 218 -170 138 -6 156 -1 169 4910 39 10 40 -11 35 -11 -4 -51 -9 -87 -13 -113 -10 -179 29 -179 106 0 71 52108 219 155 52 15 107 34 122 42 16 8 29 14 31 14 4 0 -9 -271 -16 -332 l-5-48 58 0 58 0 6 73 c4 39 10 167 13 283 7 206 6 213 -15 247 -41 66 -166 98-316 80z\"></path><path d=\"M2446 825 c-50 -8 -94 -19 -99 -24 -5 -5 -11 -27 -14 -49 l-5 -40 5821 c64 22 200 34 260 23 81 -16 110 -92 56 -146 -29 -28 -48 -35 -247 -89-108 -30 -164 -65 -192 -121 -45 -88 -20 -186 61 -231 32 -18 60 -24 133 -27134 -6 157 0 171 45 6 20 10 38 9 39 -2 2 -32 -2 -67 -8 -128 -22 -220 17-220 92 0 75 46 110 210 160 58 17 120 40 139 51 l33 20 -6 -78 c-3 -43 -8-131 -12 -195 l-6 -118 61 0 61 0 0 93 c0 50 5 168 10 260 6 105 6 184 0 210-11 50 -52 91 -107 107 -64 18 -192 20 -287 5z\"></path><path d=\"M3965 825 c-121 -22 -119 -21 -132 -106 -7 -41 -10 -75 -8 -77 2 -225 4 52 13 163 56 292 57 307 3 10 -39 -32 -63 -159 -93 -232 -54 -295 -104-295 -233 0 -45 5 -67 23 -92 39 -59 45 -58 139 8 l86 61 -5 45 c-5 40 -2 4825 76 85 84 213 -12 157 -119 -16 -33 -64 -55 -100 -48 -23 4 -29 -2 -56 -54-16 -32 -29 -61 -29 -64 0 -9 130 -5 202 7 55 9 73 9 76 0 2 -8 33 -12 93 -12l89 0 0 93 c0 50 5 174 11 275 11 182 11 182 -12 229 -19 37 -35 53 -73 73-44 22 -63 25 -180 27 -82 1 -161 -3 -211 -12z\"></path><path d=\"M5377 830 c-154 -39 -253 -165 -265 -338 -11 -159 54 -273 183 -32274 -28 273 -39 382 -21 l69 12 15 95 c14 85 14 94 0 89 -123 -37 -261 -45-317 -19 -45 21 -74 59 -74 95 l0 29 230 0 229 0 7 36 c9 48 -2 145 -21 191-22 53 -79 108 -139 134 -40 17 -74 23 -156 25 -58 2 -122 -1 -143 -6z m178-162 c15 -14 28 -38 32 -60 l6 -38 -107 0 c-105 0 -106 0 -106 24 0 28 34 7464 86 39 16 84 11 111 -12z\"></path></g></g></svg>"
+    },
+    {
+      "uid": 27,
+      "visible": true,
+      "localName": "Image",
+      "size": 11,
+      "x": 50,
+      "y": 68,
+      "rotation": 0,
+      "src": "<svg width=\"250\" height=\"250\" viewBox=\"0 0 250 250\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" id=\"h-o-l-ds\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><path fill=\"#1B49AC\" fill-rule=\"nonzero\" d=\"M125 13l36 74 82 12 -59 57 14 81 -73 -38 -73 38 14 -81 -59 -57 82 -12 36 -74z\"></path></svg>"
+    },
+    {
+      "uid": 26,
+      "visible": true,
+      "localName": "Image",
+      "size": 8,
+      "x": 39,
+      "y": 67,
+      "rotation": 0,
+      "src": "<svg width=\"250\" height=\"250\" viewBox=\"0 0 250 250\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" id=\"h-o-l-ds\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><path fill=\"#1B49AC\" fill-rule=\"nonzero\" d=\"M125 13l36 74 82 12 -59 57 14 81 -73 -38 -73 38 14 -81 -59 -57 82 -12 36 -74z\"></path></svg>"
+    },
+    {
+      "uid": 25,
+      "visible": true,
+      "localName": "Image",
+      "size": 8,
+      "x": 60,
+      "y": 67,
+      "rotation": 0,
+      "src": "<svg width=\"250\" height=\"250\" viewBox=\"0 0 250 250\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" id=\"h-o-l-ds\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><path fill=\"#1B49AC\" fill-rule=\"nonzero\" d=\"M125 13l36 74 82 12 -59 57 14 81 -73 -38 -73 38 14 -81 -59 -57 82 -12 36 -74z\"></path></svg>"
+    },
+    {
+      "uid": 24,
+      "visible": true,
+      "localName": "Image",
+      "size": 11,
+      "x": 50,
+      "y": 31,
+      "rotation": 0,
+      "src": "<svg width=\"250\" height=\"250\" viewBox=\"0 0 250 250\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" id=\"h-o-l-ds\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><path fill=\"#1B49AC\" fill-rule=\"nonzero\" d=\"M125 13l36 74 82 12 -59 57 14 81 -73 -38 -73 38 14 -81 -59 -57 82 -12 36 -74z\"></path></svg>"
+    },
+    {
+      "uid": 23,
+      "visible": true,
+      "localName": "Image",
+      "size": 8,
+      "x": 39,
+      "y": 33,
+      "rotation": 0,
+      "src": "<svg width=\"250\" height=\"250\" viewBox=\"0 0 250 250\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" id=\"h-o-l-ds\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><path fill=\"#1B49AC\" fill-rule=\"nonzero\" d=\"M125 13l36 74 82 12 -59 57 14 81 -73 -38 -73 38 14 -81 -59 -57 82 -12 36 -74z\"></path></svg>"
+    },
+    {
+      "uid": 22,
+      "visible": true,
+      "localName": "Image",
+      "size": 8,
+      "x": 61,
+      "y": 33,
+      "rotation": 0,
+      "src": "<svg width=\"250\" height=\"250\" viewBox=\"0 0 250 250\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" id=\"h-o-l-ds\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><path fill=\"#1B49AC\" fill-rule=\"nonzero\" d=\"M125 13l36 74 82 12 -59 57 14 81 -73 -38 -73 38 14 -81 -59 -57 82 -12 36 -74z\"></path></svg>"
+    },
+    {
+      "uid": 21,
+      "visible": true,
+      "localName": "CircularText",
+      "text": ".........................................................................................................................",
+      "font": "Arial",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 60,
+      "letterSpacing": 34,
+      "radius": 48,
+      "rotation": 32,
+      "invert": false
+    },
+    {
+      "uid": 20,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "......................................................................................................................................",
+      "font": "Arial",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 25,
+      "letterSpacing": 36,
+      "radius": 53,
+      "rotation": 31,
+      "invert": false
+    },
+    {
+      "uid": 19,
+      "visible": true,
+      "localName": "CircularText",
+      "text": ".........................................................................................................................",
+      "font": "Arial",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 60,
+      "letterSpacing": 34,
+      "radius": 48,
+      "rotation": 82,
+      "invert": false
+    },
+    {
+      "uid": 18,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "......................................................................................................................................",
+      "font": "Arial",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 25,
+      "letterSpacing": 36,
+      "radius": 53,
+      "rotation": 81,
+      "invert": false
+    },
+    {
+      "uid": 14,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "......................................................................................................................................",
+      "font": "Arial",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 25,
+      "letterSpacing": 41,
+      "radius": 77,
+      "rotation": 78,
+      "invert": false
+    },
+    {
+      "uid": 13,
+      "visible": true,
+      "localName": "Line",
+      "size": 100,
+      "strokeWidth": 8,
+      "lineBreak": 0,
+      "x": 50,
+      "y": 61,
+      "rotation": 0
+    },
+    {
+      "uid": 12,
+      "visible": true,
+      "localName": "CircularText",
+      "text": ".........................................................................................................................",
+      "font": "Arial",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 61,
+      "letterSpacing": 41,
+      "radius": 80,
+      "rotation": 78,
+      "invert": false
+    },
+    {
+      "uid": 11,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "......................................................................................................................................",
+      "font": "Arial",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 27,
+      "letterSpacing": 41,
+      "radius": 77,
+      "rotation": 28,
+      "invert": false
+    },
+    {
+      "uid": 10,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "...................................................................",
+      "font": "Arial",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 55,
+      "letterSpacing": 41,
+      "radius": 80,
+      "rotation": 28,
+      "invert": false
+    },
+    {
+      "uid": 7,
+      "visible": true,
+      "localName": "Line",
+      "size": 100,
+      "strokeWidth": 8,
+      "lineBreak": 0,
+      "x": 50,
+      "y": 39,
+      "rotation": 0
+    },
+    {
+      "uid": 6,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "STORAGE SOLUTIONS",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 20,
+      "letterSpacing": 40,
+      "radius": 65,
+      "rotation": 29,
+      "invert": true
+    },
+    {
+      "uid": 5,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "DATA MANAGEMENT",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 20,
+      "letterSpacing": 40,
+      "radius": 62,
+      "rotation": 79,
+      "invert": false
+    }
+  ],
+  "scale": 1.4,
+  "stampType": "Design seals",
+  "shape": "circle",
+  "id": "seal_1749203276635",
+  "alt":"stamp mockup №3276635, type: design seals",
+  "name": "Editable Rubber Stamp Creator for Invoice - №3276635",
+  "title":"Invoice rubber stamp template made using online creator tool"
+}

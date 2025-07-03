@@ -1,0 +1,54 @@
+{
+  "primaryColor": "#1B49AC",
+  "elements": [
+    {
+      "uid": 83,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "234432 Burry street 65 Manchester",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": true
+      },
+      "fontSize": 28,
+      "letterSpacing": 58,
+      "radius": 98,
+      "rotation": 37,
+      "invert": true
+    },
+    {
+      "uid": 82,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "John Smith",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": true,
+        "italic": false,
+        "whiten": true
+      },
+      "fontSize": 28,
+      "letterSpacing": 23,
+      "radius": 97,
+      "rotation": 86,
+      "invert": false
+    },
+    {
+      "uid": 81,
+      "visible": true,
+      "localName": "Circle",
+      "size": 102,
+      "strokeWidth": 55,
+      "lineBreak": 0
+    }
+  ],
+  "scale": 1.1,
+  "stampType": "Address stamp",
+  "shape": "circle",
+  "id": "seal_1749536320778",
+  "alt":"stamp mockup №320778, type: address stamp",
+  "name": "Free Rubber Stamp Generator - №320778",
+  "title":"Create a rubber stamp online for free"
+}

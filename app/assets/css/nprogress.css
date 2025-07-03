@@ -1,0 +1,45 @@
+/* NProgress 自定义样式 */
+
+/* 进度条 */
+#nprogress .bar {
+  background: #3b82f6 !important; /* 蓝色进度条 */
+  height: 3px !important;
+  box-shadow: 0 0 10px #3b82f6, 0 0 5px #3b82f6;
+}
+
+/* 旋转器 */
+#nprogress .spinner {
+  display: block !important;
+  top: 15px !important;
+  right: 15px !important;
+}
+
+#nprogress .spinner-icon {
+  width: 18px !important;
+  height: 18px !important;
+  border: 2px solid transparent !important;
+  border-top-color: #3b82f6 !important;
+  border-left-color: #3b82f6 !important;
+}
+
+/* 进度条光晕效果 */
+#nprogress .peg {
+  box-shadow: 0 0 10px #3b82f6, 0 0 5px #3b82f6 !important;
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  #nprogress .bar {
+    height: 2px !important;
+  }
+  
+  #nprogress .spinner {
+    top: 10px !important;
+    right: 10px !important;
+  }
+  
+  #nprogress .spinner-icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
+} 

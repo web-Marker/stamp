@@ -3,7 +3,7 @@
     <!-- 顶部工具栏 -->
     <div class="bg-white border border-gray-200 shadow-sm rounded-lg">
       <div class="text-sm md:text-base border-b border-gray-200 p-2 text-black font-semibold">
-        Create your own stamp © stampdy.com
+        {{ t('editor.title') }}
       </div>
       <div class="mx-auto flex flex-col p-2 md:p-4">
         <!-- 移动端布局 - 2x2网格 -->
@@ -17,7 +17,7 @@
             class="cursor-pointer font-semibold flex flex-row items-center justify-center gap-1 sm:gap-2 w-full py-2"
             @click="templatesDialog = true"
           >
-            <span class="text-xs sm:text-sm whitespace-nowrap">Select Template</span>
+            <span class="text-xs sm:text-sm whitespace-nowrap">{{ t('editor.selectTemplate') }}</span>
           </UButton>
 
           <!-- Reset 按钮 -->
@@ -29,7 +29,7 @@
             class="cursor-pointer font-semibold flex flex-row items-center justify-center gap-1 sm:gap-2 w-full py-2"
             @click="reset"
           >
-            <span class="text-xs sm:text-sm">Reset</span>
+            <span class="text-xs sm:text-sm">{{ t('editor.reset') }}</span>
           </UButton>
 
           <!-- Choose Color 按钮 -->
@@ -43,7 +43,7 @@
               type="color"
               class="w-4 h-4 sm:w-5 sm:h-5 cursor-pointer border border-gray-200 rounded"
             >
-            <span class="text-xs sm:text-sm font-semibold">Choose Color</span>
+            <span class="text-xs sm:text-sm font-semibold">{{ t('editor.chooseColor') }}</span>
           </label>
 
           <!-- Aging Effect 按钮 -->
@@ -62,13 +62,13 @@
               variant="outline"
               class="cursor-pointer font-semibold flex flex-row items-center justify-center gap-1 sm:gap-2 w-full py-2"
             >
-              <span class="text-xs sm:text-sm">Aging Effect</span>
+              <span class="text-xs sm:text-sm">{{ t('editor.agingEffect') }}</span>
             </UButton>
             <template #content>
               <Placeholder class="w-70 m-2 inline-flex">
                 <div class="flex flex-col">
                   <div class="text-sm mb-2 text-center text-gray-600 font-semibold">
-                    Select
+                    {{ t('editor.select') }}
                   </div>
                   <USeparator class="mb-2" />
                   <div class="grid grid-cols-10 gap-1">
@@ -112,7 +112,7 @@
             class="cursor-pointer font-semibold w-full md:w-auto"
             @click="templatesDialog = true"
           >
-            Select Template
+            {{ t('editor.selectTemplate') }}
           </UButton>
 
           <!-- 中间按钮组 -->
@@ -127,7 +127,7 @@
                 type="color"
                 class="w-5 h-5 md:w-6 md:h-6 cursor-pointer border border-gray-200 rounded"
               >
-              <span class="text-sm md:text-base font-semibold">Choose Color</span>
+              <span class="text-sm md:text-base font-semibold">{{ t('editor.chooseColor') }}</span>
             </label>
             <UPopover
               arrow
@@ -144,13 +144,13 @@
                 variant="outline"
                 class="cursor-pointer font-semibold w-full md:w-auto py-2"
               >
-                <span class="text-sm md:text-base">Aging Effect</span>
+                <span class="text-sm md:text-base">{{ t('editor.agingEffect') }}</span>
               </UButton>
               <template #content>
                 <Placeholder class="w-70 m-4 inline-flex">
                   <div class="flex flex-col">
                     <div class="text-sm mb-2 text-center text-gray-600 font-semibold">
-                      Select
+                      {{ t('editor.select') }}
                     </div>
                     <USeparator class="mb-2" />
                     <div class="grid grid-cols-10 gap-1">
@@ -193,7 +193,7 @@
               class="cursor-pointer font-semibold w-full md:w-auto"
               @click="reset"
             >
-              Reset
+              {{ t('editor.reset') }}
             </UButton>
           </div>
         </div>
@@ -217,7 +217,7 @@
             <UIcon v-if="key === ElementAs.Image" name="i-custom-image" class="size-4" />
             <UIcon v-if="key === ElementAs.Shape" name="i-custom-shape" class="size-4" />
             <UIcon v-if="key === ElementAs.Text" name="i-custom-text" class="size-4" />
-            <span class="text-xs font-semibold">{{ key }}</span>
+            <span class="text-xs font-semibold">{{ t(`editor.${key}`) }}</span>
           </UButton>
         </div>
       </div>
@@ -227,7 +227,7 @@
         <div class="flex-1 flex overflow-hidden">
           <div class="border-r border-gray-200 w-[65px]">
             <div class="text-base font-medium text-center p-2">
-              Add
+              {{ t('editor.add') }}
             </div>
             <USeparator />
 
@@ -250,7 +250,7 @@
                 }"
               >
                 <UIcon name="i-custom-image" class="size-7" />
-                <p>Image</p>
+                <p>{{ t('editor.image') }}</p>
               </div>
               <div
                 v-if="key === ElementAs.Shape"
@@ -260,7 +260,7 @@
                 }"
               >
                 <UIcon name="i-custom-shape" class="size-7" />
-                <p>Shape</p>
+                <p>{{ t('editor.shape') }}</p>
               </div>
               <div
                 v-if="key === ElementAs.Text"
@@ -270,7 +270,7 @@
                 }"
               >
                 <UIcon name="i-custom-text" class="size-7" />
-                <p>Text</p>
+                <p>{{ t('editor.text') }}</p>
               </div>
               <USeparator />
 
@@ -280,11 +280,11 @@
                     <!-- 图片类型筛选 (仅在Image类型时显示) -->
                     <div v-if="key === ElementAs.Image" class="mb-4">
                       <div class="flex items-center gap-2">
-                        <span class="text-sm font-bold text-gray-700 whitespace-nowrap">Image Type:</span>
+                        <span class="text-sm font-bold text-gray-700 whitespace-nowrap">{{ t('editor.imageType') }}:</span>
                         <USelect
                           v-model="selectedImageType"
                           :items="imageTypes"
-                          placeholder="Select image type"
+                          :placeholder="t('editor.selectImageType')"
                           class="flex-1 min-w-[120px]"
                           size="md"
                         />
@@ -320,7 +320,7 @@
                         class="flex items-center justify-center h-9 w-full rounded-[4px] bg-[#E2E2E2] hover:bg-[#d5d5d5] text-black font-medium text-sm"
                       >
                         <el-icon :size="16"><Upload /></el-icon>
-                        <span class="ml-1">Upload</span>
+                        <span class="ml-1">{{ t('editor.upload') }}</span>
                       </label>
                       <input
                         id="file"
@@ -337,7 +337,7 @@
           </div>
           <div class="w-[280px]">
             <div class="text-base font-semibold text-center p-2">
-              Select Element
+              {{ t('editor.selectElement') }}
             </div>
             <USeparator />
             <div class="h-[100%] overflow-y-auto">
@@ -403,7 +403,7 @@
               <UIcon name="i-lucide-loader" class="w-10 h-10 animate-spin text-primary" />
               <div class="text-center">
                 <h3 class="text-lg font-semibold mb-1">
-                  Loading...
+                  {{ t('editor.loading') }}
                 </h3>
               </div>
               <UProgress :value="canvasProgress" class="w-32" />
@@ -453,7 +453,7 @@
             <div class="flex items-center justify-between w-full">
               <div class="flex items-center gap-2">
                 <div class="text-base font-semibold">
-                  Select Elements
+                  {{ t('editor.selectElement') }}
                 </div>
                 <div class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">
                   {{ stampElements.length }}
@@ -478,10 +478,10 @@
             <div v-if="stampElements.length === 0" class="text-center py-6">
               <UIcon name="i-lucide-layers" class="size-10 text-gray-300 mx-auto mb-2" />
               <p class="text-gray-500 text-xs">
-                No elements
+                {{ t('editor.noElements') }}
               </p>
               <p class="text-gray-400 text-xs mt-1">
-                Add elements from the left toolbar
+                {{ t('editor.addElementsFromLeftToolbar') }}
               </p>
             </div>
 
@@ -537,9 +537,7 @@
               <label
                 class="block text-sm text-gray-600 font-semibold mb-1"
                 :class="{ 'inline-block align-middle': item.type === 'checkbox' }"
-              >{{
-                item.label
-              }}</label>
+              >{{ t(`editor.settings.${item.label}`) }}</label>
               <UCheckbox
                 v-if="item.type === 'checkbox'"
                 v-model="(activeElement as any)[item.name]"
@@ -669,7 +667,7 @@
         <div v-if="activeElement && activeElement.settings.length > 4" class="xl:hidden flex items-center justify-center mt-3 py-2 border-t border-gray-100">
           <div class="flex items-center space-x-2 text-gray-400 bg-gray-50 px-3 py-1.5 rounded-full">
             <SvgScroll class="size-4" />
-            <span class="text-xs font-medium">Scroll to see more</span>
+            <span class="text-xs font-medium">{{ t('editor.scrollToSeeMore') }}</span>
           </div>
         </div>
       </div>
@@ -686,7 +684,7 @@
   >
     <template #header>
       <div class="text-lg font-semibold">
-        Add {{ currentElementType }}
+        {{ t('editor.add') }} {{ currentElementType }}
       </div>
     </template>
     <template #body>
@@ -694,7 +692,7 @@
         <!-- 移动端图片类型筛选 -->
         <div v-if="currentElementType === ElementAs.Image" class="mb-4 flex-shrink-0">
           <div class="text-sm font-semibold text-gray-700 mb-2">
-            Image Type:
+            {{ t('editor.imageType') }}:
           </div>
           <div class="relative">
             <div class="overflow-x-auto">
@@ -751,7 +749,7 @@
             class="flex items-center justify-center h-10 w-full rounded-md bg-gray-200 hover:bg-gray-300 text-black font-medium text-sm"
           >
             <el-icon :size="16"><Upload /></el-icon>
-            <span class="ml-1">Upload</span>
+            <span class="ml-1">{{ t('editor.upload') }}</span>
           </label>
           <input
             id="mobile-file"
@@ -776,13 +774,13 @@
       <div class="flex items-center justify-between w-full gap-2 sm:gap-4">
         <!-- 标题 -->
         <div class="text-lg font-semibold flex-shrink-0">
-          Templates
+          {{ t('editor.templates') }}
         </div>
 
         <!-- 中间：形状选择器 -->
         <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
           <div class="text-l text-gray-600 font-bold hidden sm:block">
-            Choose shape:
+            {{ t('editor.chooseShape') }}:
           </div>
           <div class="flex items-center space-x-4 sm:space-x-6">
             <UButton
@@ -838,8 +836,8 @@
           class="cursor-pointer flex-shrink-0"
           @click="templatesDialog = false"
         >
-          <span class="hidden sm:inline">Back edit</span>
-          <span class="sm:hidden">Back</span>
+          <span class="hidden sm:inline">{{ t('editor.backEdit') }}</span>
+          <span class="sm:hidden">{{ t('editor.back') }}</span>
         </UButton>
       </div>
     </template>
@@ -941,7 +939,7 @@
           p-id="2324"
         ><path d="M544.256 605.184l244.224-244.224a31.744 31.744 0 0 1 45.056 45.056l-295.424 295.424a36.864 36.864 0 0 1-51.2 0L190.464 406.528a31.744 31.744 0 1 1 45.056-45.056l244.224 244.224V111.104a32.256 32.256 0 1 1 64 0zM153.6 902.656a32.256 32.256 0 0 1 0-64h716.8a32.256 32.256 0 0 1 0 64z" fill="#ffffff" p-id="2325" /></svg>
         <!-- 文案放在右边 -->
-        <span>Download</span>
+        <span>{{ t('editor.download') }}</span>
       </span>
     </UButton>
   </div>
@@ -1022,27 +1020,8 @@
                 >
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
-                <span class="text-gray-800">
-                  <b>PROMO:<span>1.99 $</span></b></span>
-              </li>
-
-              <li class="flex gap-x-2">
-                <svg
-                  class="shrink-0 mt-0.5 size-3 sm:size-4 text-blue-600 dark:text-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span class="text-gray-800">
-                  <b>PNG+SVG+PDF+DOCX</b>
+                <span class="text-gray-800 font-bold text-base">
+                  {{ t('editor.promo') }} 1.99 $
                 </span>
               </li>
 
@@ -1061,8 +1040,28 @@
                 >
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
-                <span class="text-gray-800 font-bold">
-                  High Quality
+                <span class="text-gray-800 font-semibold">
+                  PNG+SVG+PDF+DOCX
+                </span>
+              </li>
+
+              <li class="flex gap-x-2">
+                <svg
+                  class="shrink-0 mt-0.5 size-3 sm:size-4 text-blue-600 dark:text-blue-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span class="text-gray-800 font-semibold">
+                  {{ t('editor.highQuality') }}
                 </span>
               </li>
               <li class="flex gap-x-2">
@@ -1080,8 +1079,8 @@
                 >
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
-                <span class="text-gray-800 font-bold">
-                  Transparent background & HD images
+                <span class="text-gray-800 font-semibold">
+                  {{ t('editor.transparentBackground') }} & {{ t('editor.hdImages') }}
                 </span>
               </li>
               <li class="flex gap-x-2">
@@ -1099,18 +1098,11 @@
                 >
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
-                <span class="text-gray-800 font-bold">
-                  Scalability
+                <span class="text-gray-800 font-semibold">
+                  {{ t('editor.scalability') }}
                 </span>
               </li>
             </ul>
-
-            <button
-              class="mt-4 sm:mt-8 py-2 sm:py-3 px-6 sm:px-10 inline-flex justify-center items-center gap-x-2 text-lg sm:text-base font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700  relative w-full sm:w-auto cursor-pointer"
-              @click="onSampleClick"
-            >
-              Sample
-            </button>
           </div>
 
           <!-- 右侧内容 - 在小屏幕上调整内边距 -->
@@ -1121,7 +1113,7 @@
               <h3
                 class="text-lg sm:text-xl font-semibold text-center mb-3 sm:mb-4"
               >
-                Specify your E-mail
+                {{ t('editor.download') }}
               </h3>
 
               <input
@@ -1129,12 +1121,12 @@
                 v-model="newUserEmail"
                 type="email"
                 class="w-full px-3 sm:px-4 py-2 sm:py-3 border-t-0 border-x-0 border-b-2 border-blue-500 focus:outline-none focus:border-blue-700 transition-colors"
-                placeholder="your@email.com"
+                :placeholder="t('editor.yourEmail')"
               >
 
               <div class="mt-4 sm:mt-6 text-gray-700 text-base font-medium">
                 <p class="mb-2">
-                  After payment, the seal will automatically download in the top-right corner of your browser
+                  {{ t('editor.afterPayment') }}
                   <svg
                     class="w-4 h-4 sm:w-6 sm:h-6 inline-block"
                     fill="currentColor"
@@ -1146,16 +1138,23 @@
                     />
                   </svg>
                 </p>
-                <p class="mb-2">
-                  Also, the download link will be sent to your specified email: <b>{{ newUserEmail }}</b>
+                <p class="mb-2 h-12">
+                  {{ t('editor.alsoDownloadLink') }} <b>{{ newUserEmail }}</b>
                 </p>
               </div>
 
-              <div class="mt-4 sm:mt-8 flex justify-center">
+              <div class="mt-4 sm:mt-8 flex justify-center ">
                 <!-- 确认邮箱按钮 - 调整尺寸 -->
+
+                <button
+                  class="mt-4 sm:mt-8 py-2 sm:py-3 px-6 sm:px-10 inline-flex justify-center items-center gap-x-2 text-lg sm:text-base font-semibold rounded-lg border-2 border-gray-300 bg-gray-100 text-gray-700 hover:bg-gray-200 hover:border-gray-400 focus:outline-none focus:bg-gray-200 focus:border-gray-400 transition-all duration-200 relative w-full sm:w-auto cursor-pointer mr-3"
+                  @click="onSampleClick"
+                >
+                  {{ t('editor.sample') }}
+                </button>
                 <button
                   v-if="!emailConfirmed"
-                  class="mt-4 sm:mt-8 py-2 sm:py-3 px-8 sm:px-14 inline-flex justify-center items-center gap-x-2 text-lg sm:text-base font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none relative w-full sm:w-auto cursor-pointer"
+                  class="mt-4 sm:mt-8 py-2 sm:py-3 px-6 sm:px-10 inline-flex justify-center items-center gap-x-2 text-lg sm:text-base font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none relative w-full sm:w-auto cursor-pointer"
                   :disabled="!isValidEmail || downloadLoading"
                   @click="confirmSave"
                 >
@@ -1184,11 +1183,11 @@
                       />
                     </svg>
                   </span>
-                  <span :class="{ 'opacity-0': downloadLoading }" class="font-semibold">Confirm Email</span>
+                  <span :class="{ 'opacity-0': downloadLoading }" class="font-semibold">{{ t('editor.continue') }}</span>
                 </button>
 
                 <!-- 去支付按钮 - 调整尺寸 -->
-                <a
+                <!-- <a
                   v-if="emailConfirmed && paymentUrl"
                   class="mt-4 sm:mt-8 py-2 sm:py-3 px-8 sm:px-14 inline-flex justify-center items-center gap-x-2 text-xs sm:text-sm font-medium rounded-lg border border-transparent bg-green-600 text-white hover:bg-green-700 focus:outline-none focus:bg-green-700  transition-all duration-300 shadow-md hover:shadow-lg w-full sm:w-auto cursor-pointer"
                   :href="paymentUrl"
@@ -1209,7 +1208,7 @@
                     />
                   </svg>
                   Pay $1.99
-                </a>
+                </a> -->
               </div>
             </div>
           </div>
@@ -1221,7 +1220,7 @@
   <UModal v-model:open="showConfirmModal" title="Warning">
     <template #body>
       <div class="text-lg py-3">
-        Your progress will be lost. Proceed?
+        {{ t('editor.yourProgressWillBeLost') }}
       </div>
     </template>
 
@@ -1232,21 +1231,246 @@
           variant="outline"
           @click="showConfirmModal = false"
         >
-          Cancel
+          {{ t('editor.cancel') }}
         </UButton>
         <UButton
           color="error"
           @click="handleConfirm"
         >
-          Proceed
+          {{ t('editor.proceed') }}
         </UButton>
+      </div>
+    </template>
+  </UModal>
+
+  <!-- Payment Cancel Dialog -->
+  <UModal
+    v-model:open="showPaymentCancelDialog"
+    :ui="{
+      content: 'max-w-md',
+      body: 'w-full !py-6 px-6',
+    }"
+  >
+    <template #content>
+      <div class="relative flex flex-col bg-white shadow-lg rounded-xl">
+        <div class="absolute top-2 end-2 z-10">
+          <button
+            type="button"
+            class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
+            @click="() => {
+              showPaymentCancelDialog = false
+              const router = useRouter()
+              router.replace({ query: {} })
+            }"
+          >
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="py-6 px-6">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="inline-flex justify-center items-center size-[46px] rounded-full border-4 border-orange-50 bg-orange-100 text-orange-500">
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </span>
+            <div class="text-lg font-semibold">
+              {{ t('editor.paymentCancelled') }}
+            </div>
+          </div>
+
+          <div class="text-center space-y-4 mb-6">
+            <p class="text-gray-600">
+              {{ t('editor.yourPaymentWasCancelled') }}
+            </p>
+            <p class="text-sm text-gray-500">
+              {{ t('editor.yourCurrentDesignHasBeenSaved') }}
+            </p>
+          </div>
+
+          <div class="flex justify-center w-full">
+            <button
+              class="mt-4 sm:mt-8 py-2 sm:py-3 px-6 sm:px-10 inline-flex justify-center items-center gap-x-2 text-lg sm:text-base font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none relative w-full sm:w-auto cursor-pointer"
+              @click="() => {
+                showPaymentCancelDialog = false
+                const router = useRouter()
+                router.replace({ query: {} })
+                showPaymentDialog = true
+              }"
+            >
+              {{ t('editor.tryPaymentAgain') }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </template>
+  </UModal>
+
+  <!-- Payment Processing/Success Dialog -->
+  <UModal
+    v-model:open="showPaymentProcessingDialog"
+    :ui="{
+      content: 'max-w-md',
+      body: 'w-full !py-6 px-6',
+    }"
+    :prevent-close="paymentProcessingStatus === 'loading'"
+  >
+    <template #content>
+      <div class="relative flex flex-col bg-white shadow-lg rounded-xl">
+        <div v-if="paymentProcessingStatus === 'success'" class="absolute top-2 end-2 z-10">
+          <button
+            type="button"
+            class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
+            @click="showPaymentProcessingDialog = false"
+          >
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="py-6 px-6">
+          <div class="flex items-center gap-3 mb-6">
+            <span
+              v-if="paymentProcessingStatus === 'loading'"
+              class="inline-flex justify-center items-center size-[46px] rounded-full border-4 border-blue-50 bg-blue-100 text-blue-500"
+            >
+              <UIcon name="i-lucide-loader" class="w-6 h-6 animate-spin" />
+            </span>
+            <span
+              v-else
+              class="inline-flex justify-center items-center size-[46px] rounded-full border-4 border-green-50 bg-green-100 text-green-500"
+            >
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </span>
+            <div class="text-lg font-semibold">
+              {{ paymentProcessingStatus === 'loading' ? t('editor.processingPayment') : t('editor.paymentSuccessful') }}
+            </div>
+          </div>
+
+          <div v-if="paymentProcessingStatus === 'loading'" class="text-center space-y-4 mb-6">
+            <p class="text-gray-600">
+              {{ t('editor.tip1') }}
+            </p>
+            <div class="flex justify-center">
+              <UProgress :value="75" class="w-48" />
+            </div>
+            <p class="text-sm text-gray-500">
+              {{ t('editor.tip2') }}
+            </p>
+          </div>
+          <div v-else class="text-center space-y-4 mb-6">
+            <p class="text-gray-600 font-medium">
+              {{ t('editor.tip3') }}
+            </p>
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <p class="text-sm text-green-800 font-medium mb-2">
+                {{ t('editor.tip4') }}
+              </p>
+              <ul class="text-sm text-green-700 space-y-1">
+                <li>• {{ t('editor.highResolutionPngFile') }}</li>
+                <li>• {{ t('editor.scalableSvgFormat') }}</li>
+                <li>• {{ t('editor.printReadyPdfDocument') }}</li>
+                <li>• {{ t('editor.editableDocxFile') }}</li>
+              </ul>
+            </div>
+            <p class="text-sm text-gray-500">
+              {{ t('editor.tip5') }}
+            </p>
+          </div>
+
+          <div v-if="paymentProcessingStatus === 'success'" class="flex justify-center w-full">
+            <UButton
+              size="md"
+              color="primary"
+              variant="solid"
+              class="px-8 py-3 cursor-pointer
+              bg-gradient-to-r from-blue-600 to-purple-600
+              hover:from-blue-700 hover:to-purple-700
+              text-white font-bold text-base
+              shadow-lg hover:shadow-xl
+              transform hover:scale-105 hover:-translate-y-1
+              transition-all duration-300 ease-out
+              border-0
+              rounded-xl"
+              @click="async () => {
+                const zipBlob = await generateZip()
+                triggerDownload(zipBlob)
+                showPaymentProcessingDialog = false
+              }"
+            >
+              <span class="flex items-center space-x-2">
+                <!-- 下载图标放在左边 -->
+                <svg
+                  t="1750033438052"
+                  class="w-5 h-5"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  p-id="2324"
+                ><path d="M544.256 605.184l244.224-244.224a31.744 31.744 0 0 1 45.056 45.056l-295.424 295.424a36.864 36.864 0 0 1-51.2 0L190.464 406.528a31.744 31.744 0 1 1 45.056-45.056l244.224 244.224V111.104a32.256 32.256 0 1 1 64 0zM153.6 902.656a32.256 32.256 0 0 1 0-64h716.8a32.256 32.256 0 0 1 0 64z" fill="#ffffff" p-id="2325" /></svg>
+                <!-- 文案放在右边 -->
+                <span>{{ t('editor.download') }}</span>
+              </span>
+            </UButton>
+          </div>
+        </div>
       </div>
     </template>
   </UModal>
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onMounted, watch, computed } from 'vue'
 import {
   Upload,
 } from '@element-plus/icons-vue'
@@ -1268,8 +1492,10 @@ import AsyncTask from '@/utils/async-task'
 import { frontDownload } from '@/utils/common'
 import { getBasicFonts, getSystemFonts } from '~/utils/fontUtils'
 
-// C2S.prototype.scale = function () {} // 不需要处理缩放
-C2S.prototype.clearRect = function () {} // 会绘制一个白色的矩形，不需要
+const { t, locale, tm } = useI18n()
+
+// C2S.prototype.scale = function () {} // No need to handle scaling
+C2S.prototype.clearRect = function () {} // Will draw a white rectangle, not needed
 C2S.prototype.setLineDash = function (dash: [number, number]) {
   this.__currentElement.setAttribute('stroke-dasharray', dash.join(' '))
 }
@@ -1302,7 +1528,6 @@ const templates = import.meta.glob('./templates/*.json', {
   eager: true,
   import: 'default',
 }) as Record<string, StampTemplate>
-console.log('🚀 ~ templates:', templates)
 const templateImgs = import.meta.glob('./templates/*.png', {
   eager: true,
   import: 'default',
@@ -1382,7 +1607,7 @@ const addCustomImage = async (e: any) => {
   }
   let src = URL.createObjectURL(file)
   if (file.type === 'image/svg+xml') {
-    src = await fetch(src).then(res => res.text())
+    src = await fetch(src).then(res => res.text()).then(text => text.replace(/\n(\t)?(\t)?/g, ''))
   }
   addImageElement(src)
 }
@@ -1452,8 +1677,189 @@ const initSketch = () => {
   new (p5 as any)()
 }
 
+const paymentPollingTimer = ref<NodeJS.Timeout | null>(null)
+const isProcessingPayment = ref(false)
+
+// Payment related popup status
+const showPaymentCancelDialog = ref(false)
+const showPaymentProcessingDialog = ref(false)
+const paymentProcessingStatus = ref<'loading' | 'success'>('loading')
+
+const checkPaymentStatus = () => {
+  const route = useRoute()
+  const sessionId = route.query.session_id as string
+  const status = route.query.status as string
+
+  if (status === 'completed' && sessionId) {
+    // Payment successful, show processing dialog and start polling check
+    showPaymentProcessingDialog.value = true
+    paymentProcessingStatus.value = 'loading'
+    startPaymentPolling(sessionId)
+  } else if (status === 'cancelled') {
+    // Payment canceled, show cancel dialog
+    showPaymentCancelDialog.value = true
+  }
+}
+
+const startPaymentPolling = (sessionId: string) => {
+  if (isProcessingPayment.value) return
+
+  isProcessingPayment.value = true
+  let attempts = 0
+  const maxAttempts = 30 // Max 30 attempts, 2 seconds each, total 1 minute
+
+  const pollPaymentStatus = async () => {
+    try {
+      attempts++
+      console.log(`Checking payment status - Attempt ${attempts}`)
+
+      const paymentCheck = await $fetch('/api/payment/check', {
+        query: { session_id: sessionId },
+      })
+
+      if (paymentCheck.paid) {
+        // Payment successful, stop polling
+        stopPaymentPolling()
+        await handlePaymentCompleted(sessionId, paymentCheck)
+        return
+      }
+
+      if (attempts >= maxAttempts) {
+        // Exceeded max attempts
+        stopPaymentPolling()
+        showPaymentTimeoutMessage()
+        return
+      }
+
+      // Continue polling
+      paymentPollingTimer.value = setTimeout(pollPaymentStatus, 2000)
+    } catch (error) {
+      console.error('Error polling payment status:', error)
+      attempts++
+
+      if (attempts >= maxAttempts) {
+        stopPaymentPolling()
+        showPaymentErrorMessage()
+      } else {
+        // Continue trying
+        paymentPollingTimer.value = setTimeout(pollPaymentStatus, 2000)
+      }
+    }
+  }
+
+  // Start first check immediately
+  pollPaymentStatus()
+}
+
+// Stop polling
+const stopPaymentPolling = () => {
+  if (paymentPollingTimer.value) {
+    clearTimeout(paymentPollingTimer.value)
+    paymentPollingTimer.value = null
+  }
+  isProcessingPayment.value = false
+}
+
+const handlePaymentCompleted = async (sessionId: string, paymentData: any) => {
+  try {
+    // 1. Restore stamp design from local storage
+    // const savedStamp = localStorage.getItem('stamp_snapshot')
+    // if (!savedStamp) {
+    //   throw new Error('Stamp design data not found')
+    // }
+
+    // const stampData = JSON.parse(savedStamp)
+
+    // // 2. Restore stamp design
+    // loadTemplate(stampData)
+
+    // 3. Wait for rendering to complete
+    await nextTick()
+    await new Promise(resolve => setTimeout(resolve, 1000)) // Wait 1 second to ensure rendering is complete
+    console.log('%4353453')
+    // 4. Generate ZIP file
+    const zipBlob = await generateZip()
+
+    // 5. Convert ZIP to base64 and save to database
+    const reader = new FileReader()
+    reader.onload = async () => {
+      try {
+        const base64Data = reader.result as string
+
+        const orderResult = await $fetch('/api/orders/save', {
+          method: 'POST',
+          body: {
+            sessionId,
+            userEmail: paymentData.userEmail,
+            zipBlob: base64Data,
+          },
+        })
+
+        if (orderResult.success) {
+          // 6. Clean up URL immediately after successful order save
+          cleanupURL()
+
+          // 7. Trigger download
+          triggerDownload(zipBlob)
+
+          // 8. Update popup status to success
+          paymentProcessingStatus.value = 'success'
+
+          // 9. Clean up local storage
+          cleanupLocalStorage()
+        } else {
+          throw new Error('Failed to save order')
+        }
+      } catch (error) {
+        console.error('Error saving order:', error)
+        // Clean up URL even if save failed to prevent re-polling on refresh
+        // At least let user download the file
+        triggerDownload(zipBlob)
+        // Update popup status to success (even if save failed, user can still download)
+        paymentProcessingStatus.value = 'success'
+        // Clean up local storage
+      }
+    }
+    reader.readAsDataURL(zipBlob)
+  } catch (error) {
+    console.error('Error processing payment completion:', error)
+    // Clean up everything in case of major error
+    showPaymentErrorMessage('Error processing order, please contact support')
+  }
+}
+
+const triggerDownload = (blob: Blob) => {
+  const url = URL.createObjectURL(blob)
+  const link = document.createElement('a')
+  link.href = url
+  link.download = 'seal-pack.zip'
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
+  URL.revokeObjectURL(url)
+}
+
+// Clean up URL parameters immediately after successful payment
+const cleanupURL = () => {
+  const router = useRouter()
+  router.replace({ query: {} })
+}
+
+// Clean up local storage
+const cleanupLocalStorage = () => {
+  localStorage.removeItem('stamp_snapshot')
+}
+
+const showPaymentTimeoutMessage = () => {
+  console.log('Payment status check timeout. Please refresh the page or contact support.')
+}
+
+const showPaymentErrorMessage = (message?: string) => {
+  console.log(message || 'Payment processing error. Please contact support.')
+}
+
 onMounted(async () => {
-  // 开始Canvas loading动画
+  // Start Canvas loading animation
   const progressTimer = setInterval(() => {
     if (canvasProgress.value < 90) {
       canvasProgress.value += Math.random() * 15 + 5
@@ -1463,6 +1869,7 @@ onMounted(async () => {
   try {
     initSketch()
     loadSystemFonts()
+    checkPaymentStatus()
 
     if (!loadTemplateFromStorage()) {
       const t = Object.values(templates)[0]
@@ -1470,13 +1877,13 @@ onMounted(async () => {
     }
     activeElement.value = stampElements.value[0]
 
-    // 完成进度并延迟2秒隐藏loading
+    // Complete progress and hide loading after 2 seconds delay
     canvasProgress.value = 100
     clearInterval(progressTimer)
 
     setTimeout(() => {
       canvasLoading.value = false
-    }, 2000) // 2秒后隐藏loading
+    }, 2000) // Hide loading after 2 seconds
   } catch (error) {
     console.error('Canvas loading failed:', error)
     clearInterval(progressTimer)
@@ -1487,6 +1894,7 @@ onMounted(async () => {
 onBeforeUnmount(() => {
   saveTemplateToStorage()
   p5.instance?.remove()
+  stopPaymentPolling()
 })
 
 const canvas2svg = async () => {
@@ -1614,6 +2022,130 @@ const exportSVG = async (download = true) => {
   return svg
 }
 
+const image2pdf = (imgData: string): Blob => {
+  try {
+    const { width, height } = p5Renderer.elt
+    const pdf = new (window as any).jspdf.jsPDF({
+      orientation: 'portrait',
+      unit: 'px',
+      format: [width, height],
+      hotfixes: ['px_scaling'], // 启用更高质量的渲染
+    })
+
+    // 设置PDF中的边距和缩放比例
+    const scaleFactor = 0.7 // 50%的缩放
+
+    // 计算图像尺寸和居中位置（考虑缩放和边距）
+    const imgWidth = width * scaleFactor
+    const imgHeight = height * scaleFactor
+    const xOffset = (width - imgWidth) / 2
+    const yOffset = (height - imgHeight) / 2
+
+    pdf.addImage(
+      imgData,
+      'PNG',
+      xOffset,
+      yOffset,
+      imgWidth,
+      imgHeight,
+      undefined, // 图像别名，可选
+      'FAST',
+    )
+
+    // 将PDF转换为Blob
+    const pdfBlob = pdf.output('blob')
+    return pdfBlob
+  } catch (error) {
+    console.error('Error converting to PDF:', error)
+    // 如果发生错误，返回一个基本的PDF Blob
+    return new Blob(
+      [
+        '%PDF-1.7\n1 0 obj\n<</Type/Catalog/Pages 2 0 R>>\nendobj\n2 0 obj\n<</Type/Pages/Kids[3 0 R]/Count 1>>\nendobj\n3 0 obj\n<</Type/Page/MediaBox[0 0 3 3]/Parent 2 0 R/Resources<<>>>>\nendobj\nxref\n0 4\n0000000000 65535 f\n0000000010 00000 n\n0000000053 00000 n\n0000000102 00000 n\ntrailer\n<</Size 4/Root 1 0 R>>\nstartxref\n149\n%%EOF',
+      ],
+      { type: 'application/pdf' },
+    )
+  }
+}
+
+const image2docx = async (imgData: string): Promise<Blob> => {
+  try {
+    // 使用我们自己的方法将base64转为Uint8Array (浏览器环境不支持Buffer)
+    const binaryData = base64ToUint8Array(dataURLToBase64(imgData))
+    const { Document, Packer, Paragraph, TextRun, ImageRun, AlignmentType } = (
+      window as any
+    ).docx
+
+    // 创建文档对象
+    const doc = new Document({
+      sections: [
+        {
+          properties: {},
+          children: [
+            new Paragraph({
+              alignment: AlignmentType.CENTER,
+              children: [
+                new TextRun({
+                  text: 'stamp.png',
+                  bold: true,
+                  size: 24,
+                  break: 1,
+                }),
+                new ImageRun({
+                  data: binaryData,
+                  transformation: {
+                    width: 300,
+                    height: 300,
+                  },
+                  type: 'png',
+                }),
+              ],
+            }),
+          ],
+        },
+      ],
+    })
+
+    // 在浏览器环境中使用toBlob而不是toBuffer
+    const blob = await Packer.toBlob(doc)
+    return blob
+  } catch (error) {
+    console.error('Error converting to DOCX:', error)
+    throw error
+  }
+}
+
+const generateZip = async () => {
+  const JSZip = (await import('jszip')).default
+  // 使用JSZip创建ZIP文件
+  const zip = new JSZip()
+  const pngDataURL = exportPNG(false)
+  // 添加PNG文件到ZIP
+  zip.file('stamp.png', dataURLToBase64(pngDataURL), { base64: true })
+  // 添加SVG文件到ZIP，直接添加svg string 特殊字符会乱码
+  zip.file(
+    'stamp.svg',
+    exportSVG(false).then(svg => new Blob([svg], { type: 'image/svg+xml' })),
+  )
+  // 添加PDF文件到ZIP
+  zip.file('stamp.pdf', image2pdf(pngDataURL))
+  // 添加DOCX文件到ZIP
+  zip.file('stamp.docx', image2docx(pngDataURL))
+
+  return zip.generateAsync({ type: 'blob' })
+}
+
+const dataURLToBase64 = (dataURL: string) =>
+  dataURL.replace(/^data:\S+;base64,/, '')
+
+const base64ToUint8Array = (base64: string): Uint8Array => {
+  const raw = window.atob(base64)
+  const uint8Array = new Uint8Array(raw.length)
+  for (let i = 0; i < raw.length; i++) {
+    uint8Array[i] = raw.charCodeAt(i)
+  }
+  return uint8Array
+}
+
 // 加载系统字体
 const loadSystemFonts = async () => {
   isLoadingFonts.value = true
@@ -1622,7 +2154,6 @@ const loadSystemFonts = async () => {
 }
 
 const chooseTemplate = (template: StampTemplate) => {
-  console.log('🚀 ~ chooseTemplate ~ template:', template)
   loadTemplate(template)
   templatesDialog.value = false
   activeElement.value = stampElements.value[0]
@@ -1745,8 +2276,8 @@ const selectedImageType = ref<string>('All') // 默认选中所有图片类型
 
 // 从图片路径中提取分类名的辅助函数
 const extractImageCategory = (imagePath: string): string | null => {
-  const match = imagePath.match(/\/presets\/([^\/]+)\//)
-  return match ? match[1] : null
+  const match = imagePath.match(/\/presets\/([^/]+)\//)
+  return match?.[1] || null
 }
 
 // 过滤后的图片预设
@@ -1802,11 +2333,11 @@ const closePaymentDialog = () => {
   showPaymentDialog.value = false
   // 重置状态，以便下次打开对话框时重新确认邮箱
   emailConfirmed.value = false
-  paymentUrl.value = ''
+  // paymentUrl.value = ''
 }
 
 const emailConfirmed = ref(false)
-const paymentUrl = ref('')
+// const paymentUrl = ref('')
 const downloadLoading = ref(false)
 const newUserEmail = ref('')
 
@@ -1820,24 +2351,32 @@ const showPaymentDialog = ref(false)
 
 const confirmSave = async () => {
   // exportFreePNG()
+  try {
+    if (isValidEmail.value) {
+      downloadLoading.value = true
 
-  if (isValidEmail.value) {
-    downloadLoading.value = true
-
-    const response = await $fetch('/api/stripe/create-payment-link', {
-      method: 'POST',
-      body: {
-        userEmail: newUserEmail.value,
-      },
-    })
-    console.log('🚀 ~ confirmSave ~ response:', response)
-    downloadLoading.value = false
-    if (response.success) {
-    // 发送请求到后端确认邮箱
-    // 后端返回支付链接
-      paymentUrl.value = response.url
+      const response = await $fetch('/api/stripe/create-payment-link', {
+        method: 'POST',
+        body: {
+          userEmail: newUserEmail.value,
+        },
+      })
+      if (response.success && response.url) {
+        // 发送请求到后端确认邮箱
+        // 后端返回支付链接
+        saveTemplateToStorage()
+        await new Promise(resolve => setTimeout(resolve, 1000))
+        location.href = response.url
+      // 保存模板到本地存储
+      // paymentUrl.value = response.url
       // showPaymentDialog.value = true
+      }
     }
+  } catch (error) {
+    console.error('创建支付链接失败:', error)
+    showPaymentErrorMessage('创建支付链接失败，请重试')
+  } finally {
+    downloadLoading.value = false
   }
 }
 

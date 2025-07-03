@@ -1,0 +1,64 @@
+{
+  "primaryColor": "#ff0000",
+  "elements": [
+    {
+      "uid": 60,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "我的印章",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 35,
+      "letterSpacing": 17,
+      "radius": 94,
+      "rotation": 14,
+      "invert": true
+    },
+    {
+      "uid": 59,
+      "visible": true,
+      "localName": "Image",
+      "size": 30,
+      "x": 50,
+      "y": 50,
+      "rotation": 0,
+      "src": "<svg width=\"250\" height=\"250\" viewBox=\"0 0 250 250\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" id=\"h-o-l-ds\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><path fill=\"#1B49AC\" fill-rule=\"nonzero\" d=\"M125 13l36 74 82 12 -59 57 14 81 -73 -38 -73 38 14 -81 -59 -57 82 -12 36 -74z\"></path></svg>"
+    },
+    {
+      "uid": 58,
+      "visible": true,
+      "localName": "CircularText",
+      "text": "公司印章",
+      "font": "Aria",
+      "fontStyle": {
+        "bold": false,
+        "italic": false,
+        "whiten": false
+      },
+      "fontSize": 35,
+      "letterSpacing": 19,
+      "radius": 90,
+      "rotation": 91,
+      "invert": false
+    },
+    {
+      "uid": 56,
+      "visible": true,
+      "localName": "Circle",
+      "size": 113,
+      "strokeWidth": 3,
+      "lineBreak": 0
+    }
+  ],
+  "scale": 1.1,
+  "stampType": "Chinese seal",
+  "shape": "circle",
+  "id": "seal_1749535972679",
+  "alt":"stamp mockup №972679, type: chinese seal",
+  "name": "Editable Rubber Stamp Design - №972679",
+  "title":"Modify rubber stamp layout and text online"
+}
