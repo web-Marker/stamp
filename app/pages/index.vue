@@ -308,14 +308,12 @@ const stampTypes = ['India seals',
         </p>
       </div>
     </div>
-
     <Editor ref="editor" />
-
-    <!-- <div class="flex justify-center m-2">
+    <div v-if="$config.public.isDev" class="flex justify-center m-2">
       <UButton size="lg" @click="exportTemplate">
         <span class="px-4">Export</span>
       </UButton>
-    </div> -->
+    </div>
 
     <!-- Enhanced stamp type selection area -->
     <div class="w-full py-8 px-4">

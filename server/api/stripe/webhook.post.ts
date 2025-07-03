@@ -20,8 +20,8 @@ export default defineEventHandler(async (event) => {
       statusMessage: 'Missing request body',
     })
   }
-  const db = useDrizzle()
 
+  const db = useDrizzle()
   if (!db) {
     throw createError({
       statusCode: 500,
@@ -45,7 +45,7 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  console.log('Webhook event type:', stripeEvent.type) // 调试日志
+  console.log('Webhook event type:', stripeEvent.type)
 
   try {
     switch (stripeEvent.type) {
@@ -54,17 +54,23 @@ export default defineEventHandler(async (event) => {
         const userEmail = session.metadata?.userEmail
         const sessionId = session.id
 
+        console.log('💳 Processing payment completion for:', { sessionId, userEmail })
+
         try {
-          console.log('🔄 Attempting database insert...')
           await db.insert(tables.orders).values({
-            paidAt: new Date(),
             sessionId: sessionId as string,
             userEmail: userEmail as string,
+            paidAt: new Date(),
             createdAt: new Date(),
           })
+          console.log('✅ Payment record saved to database')
         } catch (dbError) {
-          console.error('❌ Database insert failed with detailed error:')
-          console.error('Error object:', dbError)
+          console.error('❌ Database insert failed:', dbError)
+          // 数据库错误应该返回错误，让 Stripe 重试
+          throw createError({
+            statusCode: 500,
+            statusMessage: 'Database insert failed',
+          })
         }
 
         break
@@ -72,7 +78,6 @@ export default defineEventHandler(async (event) => {
 
       case 'charge.updated':
       case 'charge.succeeded': {
-        // 处理支付更新事件，但不需要特殊处理
         console.log('💳 Charge event received:', stripeEvent.type)
         break
       }
@@ -84,7 +89,14 @@ export default defineEventHandler(async (event) => {
     }
   } catch (error) {
     console.error('❌ Webhook processing error:', error)
-    // 不抛出错误，让 Stripe 知道我们收到了 webhook
+    // 如果是已知的HTTP错误，直接抛出
+    if ((error as any).statusCode) {
+      throw error
+    }
+    throw createError({
+      statusCode: 500,
+      statusMessage: 'Webhook processing failed',
+    })
   }
 
   return { received: true }

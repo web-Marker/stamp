@@ -947,7 +947,7 @@
   <UModal
     v-model:open="showPaymentDialog"
     :ui="{
-      content: 'mt-0 ease-out transition-all sm:max-w-4xl w-full max-w-[95%] m-3 sm:mx-auto',
+      content: 'mt-0 ease-out transition-all sm:max-w-4xl w-full max-w-[90%] mx-auto my-3',
     }"
   >
     <template #content>
@@ -1639,7 +1639,7 @@ const reset = async () => {
 }
 
 // p5.js sketch
-const initSketch = () => {
+const initSketch = (onSetup?: () => void) => {
   window.setup = () => {
     p5Renderer = createCanvas(CANVAS_SIZE, CANVAS_SIZE)
     p5Renderer.elt.remove()
@@ -1652,6 +1652,7 @@ const initSketch = () => {
     mainCtx = canvas.getContext('2d')!
     downloadCtx = downloadCanvas.getContext('2d')!
     _drawingContext = drawingContext
+    onSetup?.()
   }
   window.draw = () => {
     clear(), noFill()
@@ -1776,7 +1777,6 @@ const handlePaymentCompleted = async (sessionId: string, paymentData: any) => {
     // 3. Wait for rendering to complete
     await nextTick()
     await new Promise(resolve => setTimeout(resolve, 1000)) // Wait 1 second to ensure rendering is complete
-    console.log('%4353453')
     // 4. Generate ZIP file
     const zipBlob = await generateZip()
 
@@ -1867,17 +1867,18 @@ onMounted(async () => {
   }, 100)
 
   try {
-    initSketch()
-    loadSystemFonts()
     checkPaymentStatus()
 
-    if (!loadTemplateFromStorage()) {
-      const t = Object.values(templates)[0]
-      t && loadTemplate(t)
-    }
-    activeElement.value = stampElements.value[0]
+    initSketch(() => {
+      if (!loadTemplateFromStorage()) {
+        const t = Object.values(templates)[0]
+        t && loadTemplate(t)
+      }
+      activeElement.value = stampElements.value[0]
+    })
+    loadSystemFonts()
 
-    // Complete progress and hide loading after 2 seconds delay
+    // 完成进度并延迟2秒隐藏loading
     canvasProgress.value = 100
     clearInterval(progressTimer)
 
@@ -2168,6 +2169,11 @@ const loadTemplate = (template: StampTemplate) => {
   stampElements.value = template.elements
     .map(el => StampElement.fromJSON(JSON.stringify(el)))
     .filter(Boolean as any)
+
+  const aging = new AgingEffect()
+  aging.enable = template.aging?.enable ?? false
+  aging.intensity = template.aging?.intensity ?? 0
+  stampConfig.aging = aging
 }
 
 // 保存模板列表到本地存储
@@ -2189,6 +2195,7 @@ const getSnapshot = (minify = true) =>
     {
       primaryColor: stampConfig.primaryColor,
       elements: stampElements.value,
+    // aging: stampConfig.aging,
     },
     null,
     minify ? 0 : 2,
@@ -2373,8 +2380,8 @@ const confirmSave = async () => {
       }
     }
   } catch (error) {
-    console.error('创建支付链接失败:', error)
-    showPaymentErrorMessage('创建支付链接失败，请重试')
+    console.error('Create payment link failed:', error)
+    showPaymentErrorMessage('Create payment link failed, please try again')
   } finally {
     downloadLoading.value = false
   }

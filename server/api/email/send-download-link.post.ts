@@ -2,7 +2,7 @@ import { sendEmail } from '../../utils/email'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
-  const { email } = body
+  const { sessionId, userEmail: email } = body
 
   if (!email) {
     return createError({
@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
     // 生成订单页面的URL，包含邮箱参数
     const config = useRuntimeConfig()
     const baseUrl = config.public.appUrl || 'https://stampdy.com'
-    const downloadUrl = `${baseUrl}/order?email=${encodeURIComponent(email)}`
+    const downloadUrl = `${baseUrl}/order?sessionId=${encodeURIComponent(sessionId)}`
 
     // 构建邮件HTML内容，包含个性化信息
     const html = getSealDownloadEmailTemplate(downloadUrl, email, `ORD-${Date.now()}`)

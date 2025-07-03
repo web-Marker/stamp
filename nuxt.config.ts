@@ -135,6 +135,7 @@ export default defineNuxtConfig({
     public: {
       appUrl: process.env.NUXT_APP_URL,
       appName: process.env.NUXT_APP_NAME,
+      isDev: process.env.NODE_ENV === 'development',
     },
     stripe: {
       secretKey: process.env.STRIPE_SECRET_KEY,

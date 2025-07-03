@@ -78,8 +78,8 @@ export class DrawStampUtils {
       throw new Error('Failed to get canvas context')
     }
     this.initDrawStampConfigsUtils = new InitDrawStampConfigsUtils()
-    this.drawStampConfigs =
-      this.initDrawStampConfigsUtils.initDrawStampConfigs()
+    this.drawStampConfigs
+      = this.initDrawStampConfigsUtils.initDrawStampConfigs()
     this.canvasCtx = ctx
     this.mmToPixel = mmToPixel
     this.canvas = canvas
@@ -125,7 +125,7 @@ export class DrawStampUtils {
       '手动做旧   1',
       x,
       y,
-      this.drawStampConfigs.agingEffect.agingEffectParams
+      this.drawStampConfigs.agingEffect.agingEffectParams,
     )
     const radius = 1 * this.mmToPixel // 直径3mm，半径1.5mm
 
@@ -166,7 +166,7 @@ export class DrawStampUtils {
   }
 
   private addCanvasListener() {
-    this.canvas.addEventListener('mousemove', event => {
+    this.canvas.addEventListener('mousemove', (event) => {
       if (this.drawStampConfigs.openManualAging && event.buttons === 1) {
         const rect = this.canvas.getBoundingClientRect()
         // 计算正确的坐标
@@ -175,17 +175,17 @@ export class DrawStampUtils {
         const x = (event.clientX - rect.left) * scaleX
         const y = (event.clientY - rect.top) * scaleY
 
-        const agingIntensity =
-          this.drawStampConfigs.agingEffect.agingIntensity / 100
+        const agingIntensity
+          = this.drawStampConfigs.agingEffect.agingIntensity / 100
         this.addManualAgingEffect(x, y, agingIntensity)
       } else {
         this.onMouseMove(event)
       }
     })
-    this.canvas.addEventListener('mouseleave', event => {
+    this.canvas.addEventListener('mouseleave', (event) => {
       this.onMouseLeave(event)
     })
-    this.canvas.addEventListener('mousedown', event => {
+    this.canvas.addEventListener('mousedown', (event) => {
       this.onMouseDown(event)
       if (this.drawStampConfigs.openManualAging) {
         // 添加手动做旧效果
@@ -195,15 +195,15 @@ export class DrawStampUtils {
         const x = (event.clientX - rect.left) * scaleX
         const y = (event.clientY - rect.top) * scaleY
         // 增加做旧效果的强度
-        const agingIntensity =
-          this.drawStampConfigs.agingEffect.agingIntensity / 100 // 将强度调整为原来的2倍
+        const agingIntensity
+          = this.drawStampConfigs.agingEffect.agingIntensity / 100 // 将强度调整为原来的2倍
         this.addManualAgingEffect(x, y, agingIntensity)
       }
     })
-    this.canvas.addEventListener('mouseup', event => {
+    this.canvas.addEventListener('mouseup', (event) => {
       this.onMouseUp()
     })
-    this.canvas.addEventListener('click', event => {
+    this.canvas.addEventListener('click', (event) => {
       this.onCanvasClick(event)
     })
     // 添加鼠标滚轮事件监听器
@@ -313,7 +313,7 @@ export class DrawStampUtils {
           0,
           x,
           y,
-          this.drawStampConfigs.primaryColor
+          this.drawStampConfigs.primaryColor,
         )
       }
     }
@@ -323,7 +323,7 @@ export class DrawStampUtils {
     ctx: CanvasRenderingContext2D,
     image: IDrawStar,
     centerX: number,
-    centerY: number
+    centerY: number,
   ) {
     try {
       // 计算绘制尺寸
@@ -336,7 +336,7 @@ export class DrawStampUtils {
         centerX - width / 2,
         centerY - height / 2,
         width,
-        height
+        height,
       )
 
       // 将图像 canvas 的内容绘制到主 canvas
@@ -351,7 +351,7 @@ export class DrawStampUtils {
     ctx: CanvasRenderingContext2D,
     imageList: IDrawImage[],
     centerX: number,
-    centerY: number
+    centerY: number,
   ) {
     for (const image of imageList) {
       if (image.imageUrl) {
@@ -398,7 +398,7 @@ export class DrawStampUtils {
     img: ImageBitmap,
     imageConfig: IDrawImage,
     centerX: number,
-    centerY: number
+    centerY: number,
   ) {
     // 计算绘制尺寸
     let width = imageConfig.imageWidth * this.mmToPixel
@@ -445,7 +445,7 @@ export class DrawStampUtils {
     stampType: IStampType,
     centerX: number,
     centerY: number,
-    radiusX: number
+    radiusX: number,
   ) {
     const fontSize = stampType.fontHeight * this.mmToPixel
     const letterSpacing = stampType.letterSpacing
@@ -466,17 +466,17 @@ export class DrawStampUtils {
     lines.forEach((line, lineIndex) => {
       const chars = line.split('')
       const charWidths = chars.map(char => ctx.measureText(char).width)
-      const totalWidth =
-        charWidths.reduce((sum, width) => sum + width, 0) +
-        (chars.length - 1) * letterSpacing * this.mmToPixel
+      const totalWidth
+        = charWidths.reduce((sum, width) => sum + width, 0)
+          + (chars.length - 1) * letterSpacing * this.mmToPixel
 
       // 计算每行的垂直偏移，使用新的 lineSpacing
-      const lineOffset =
-        (lineIndex - (lineCount - 1) / 2) * (fontSize + lineSpacing)
+      const lineOffset
+        = (lineIndex - (lineCount - 1) / 2) * (fontSize + lineSpacing)
 
       // 计算文字位置（在五角星正下方）
-      const textY =
-        centerY + radiusX * 0.5 + positionY * this.mmToPixel + lineOffset
+      const textY
+        = centerY + radiusX * 0.5 + positionY * this.mmToPixel + lineOffset
 
       ctx.save()
       ctx.translate(centerX, textY)
@@ -500,9 +500,9 @@ export class DrawStampUtils {
     stampTypeList: IStampType[],
     centerX: number,
     centerY: number,
-    radiusX: number
+    radiusX: number,
   ) {
-    stampTypeList.forEach(stampType => {
+    stampTypeList.forEach((stampType) => {
       this.drawStampType(ctx, stampType, centerX, centerY, radiusX)
     })
     ctx.restore()
@@ -524,7 +524,7 @@ export class DrawStampUtils {
     radiusX: number,
     radiusY: number,
     borderWidth: number,
-    borderColor: string
+    borderColor: string,
   ) {
     ctx.beginPath()
     ctx.ellipse(x, y, radiusX, radiusY, 0, 0, Math.PI * 2)
@@ -548,7 +548,7 @@ export class DrawStampUtils {
     centerX: number,
     centerY: number,
     radiusX: number,
-    radiusY: number
+    radiusY: number,
   ) {
     const fontSize = code.fontHeight * this.mmToPixel
     const text = code.code
@@ -566,8 +566,8 @@ export class DrawStampUtils {
     if (characterCount === 1) {
       // 单个字符直接绘制在底部中心位置
       const x = centerX
-      const y =
-        centerY + radiusY - fontSize - code.borderOffset * this.mmToPixel
+      const y
+        = centerY + radiusY - fontSize - code.borderOffset * this.mmToPixel
 
       ctx.save()
       ctx.translate(x, y)
@@ -576,21 +576,21 @@ export class DrawStampUtils {
       ctx.restore()
     } else {
       // 多个字符时的弧形排列
-      const totalAngle =
-        Math.PI * ((1 + characterCount) / code.textDistributionFactor)
+      const totalAngle
+        = Math.PI * ((1 + characterCount) / code.textDistributionFactor)
       const startAngle = Math.PI / 2 + totalAngle / 2
       const anglePerChar = totalAngle / (characterCount - 1)
 
       characters.forEach((char, index) => {
         const angle = startAngle - anglePerChar * index
-        const x =
-          centerX +
-          Math.cos(angle) *
-            (radiusX - fontSize / 2 - code.borderOffset * this.mmToPixel)
-        const y =
-          centerY +
-          Math.sin(angle) *
-            (radiusY - fontSize / 2 - code.borderOffset * this.mmToPixel)
+        const x
+          = centerX
+            + Math.cos(angle)
+            * (radiusX - fontSize / 2 - code.borderOffset * this.mmToPixel)
+        const y
+          = centerY
+            + Math.sin(angle)
+            * (radiusY - fontSize / 2 - code.borderOffset * this.mmToPixel)
 
         ctx.save()
         ctx.translate(x, y)
@@ -614,7 +614,7 @@ export class DrawStampUtils {
     ctx: CanvasRenderingContext2D,
     taxNumber: ITaxNumber,
     centerX: number,
-    centerY: number
+    centerY: number,
   ) {
     const fontSize = taxNumber.fontHeight * this.mmToPixel
     const totalWidth = taxNumber.totalWidth * this.mmToPixel
@@ -630,16 +630,16 @@ export class DrawStampUtils {
 
     const characters = taxNumber.code.split('')
     const charCount = characters.length
-    const letterSpacing =
-      this.drawStampConfigs.taxNumber.letterSpacing * this.mmToPixel
+    const letterSpacing
+      = this.drawStampConfigs.taxNumber.letterSpacing * this.mmToPixel
 
     // 计算压缩后的总宽度
-    const compressedTotalWidth =
-      totalWidth * this.drawStampConfigs.taxNumber.compression
+    const compressedTotalWidth
+      = totalWidth * this.drawStampConfigs.taxNumber.compression
 
     // 计算单个字符的宽度（考虑压缩）
-    const charWidth =
-      (compressedTotalWidth - (charCount - 1) * letterSpacing) / charCount
+    const charWidth
+      = (compressedTotalWidth - (charCount - 1) * letterSpacing) / charCount
 
     // 计算整个文本的实际宽度
     const actualWidth = charCount * charWidth + (charCount - 1) * letterSpacing
@@ -675,10 +675,10 @@ export class DrawStampUtils {
     radiusX: number,
     radiusY: number,
     borderWidth: number,
-    forceRefresh: boolean = false
+    forceRefresh: boolean = false,
   ) {
-    const roughness =
-      borderWidth * this.drawStampConfigs.roughEdge.roughEdgeHeight * 0.01
+    const roughness
+      = borderWidth * this.drawStampConfigs.roughEdge.roughEdgeHeight * 0.01
     const points = this.drawStampConfigs.roughEdge.roughEdgePoints
     const outwardShift = this.drawStampConfigs.roughEdge.roughEdgeShift
 
@@ -688,17 +688,17 @@ export class DrawStampUtils {
 
     // 如果需要刷新或者参数数组为空,则重新生成参数
     if (
-      forceRefresh ||
-      this.drawStampConfigs.roughEdge.roughEdgeParams.length === 0
+      forceRefresh
+      || this.drawStampConfigs.roughEdge.roughEdgeParams.length === 0
     ) {
       this.drawStampConfigs.roughEdge.roughEdgeParams = []
       for (let i = 0; i < points; i++) {
         const angle = (i / points) * Math.PI * 2
-        const shouldDraw =
-          Math.random() > this.drawStampConfigs.roughEdge.roughEdgeProbability // 增加概率以获得更稀疏的效果
+        const shouldDraw
+          = Math.random() > this.drawStampConfigs.roughEdge.roughEdgeProbability // 增加概率以获得更稀疏的效果
         const size = shouldDraw
-          ? Math.random() * roughness * Math.random() +
-            this.drawStampConfigs.roughEdge.roughEdgeWidth
+          ? Math.random() * roughness * Math.random()
+          + this.drawStampConfigs.roughEdge.roughEdgeWidth
           : 0 // 减小圆形大小
         this.drawStampConfigs.roughEdge.roughEdgeParams.push({
           angle,
@@ -720,7 +720,7 @@ export class DrawStampUtils {
           ctx.arc(x, y, size * this.mmToPixel, 0, Math.PI * 2)
           ctx.fill()
         }
-      }
+      },
     )
 
     ctx.restore()
@@ -736,7 +736,7 @@ export class DrawStampUtils {
     ctx: CanvasRenderingContext2D,
     width: number,
     height: number,
-    forceRefresh: boolean = false
+    forceRefresh: boolean = false,
   ) {
     console.log(
       'addAgingEffect',
@@ -745,39 +745,39 @@ export class DrawStampUtils {
       'height',
       height,
       'forceRefresh',
-      this.drawStampConfigs.agingEffect.applyAging
+      this.drawStampConfigs.agingEffect.applyAging,
     )
     if (!this.drawStampConfigs.agingEffect.applyAging) return
     const imageData = ctx.getImageData(0, 0, width, height)
     const data = imageData.data
 
-    const centerX =
-      width / (2 * this.scale) +
-      (this.stampOffsetX * this.mmToPixel) / this.scale
+    const centerX
+      = width / (2 * this.scale)
+        + (this.stampOffsetX * this.mmToPixel) / this.scale
 
-    const centerY =
-      height / (2 * this.scale) +
-      (this.stampOffsetY * this.mmToPixel) / this.scale
+    const centerY
+      = height / (2 * this.scale)
+        + (this.stampOffsetY * this.mmToPixel) / this.scale
 
     const radius = ((Math.max(width, height) / 2) * this.mmToPixel) / this.scale
 
     // 如果需要刷新或者参数数组为空,则重新生成参数
     if (
-      forceRefresh ||
-      this.drawStampConfigs.agingEffect.agingEffectParams.length === 0
+      forceRefresh
+      || this.drawStampConfigs.agingEffect.agingEffectParams.length === 0
     ) {
       this.drawStampConfigs.agingEffect.agingEffectParams = []
       for (let y = 0; y < height; y++) {
         for (let x = 0; x < width; x++) {
           const index = (y * width + x) * 4
           const distanceFromCenter = Math.sqrt(
-            Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2)
+            Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2),
           )
           if (distanceFromCenter <= radius) {
             // 检查像素是否不是透明的（alpha 通道不为 0）
             if (data[index + 3] > 0) {
-              const intensityFactor =
-                this.drawStampConfigs.agingEffect.agingIntensity / 100
+              const intensityFactor
+                = this.drawStampConfigs.agingEffect.agingIntensity / 100
               const seed = Math.random()
               this.drawStampConfigs.agingEffect.agingEffectParams.push({
                 x: x - this.stampOffsetX * this.mmToPixel,
@@ -796,7 +796,7 @@ export class DrawStampUtils {
     }
 
     // 使用保存的参数应用做旧效果
-    this.drawStampConfigs.agingEffect.agingEffectParams.forEach(param => {
+    this.drawStampConfigs.agingEffect.agingEffectParams.forEach((param) => {
       const {
         x,
         y,
@@ -819,7 +819,7 @@ export class DrawStampUtils {
           adjustedY,
           noiseSize,
           noise,
-          true
+          true,
         )
       }
 
@@ -831,7 +831,7 @@ export class DrawStampUtils {
           adjustedY,
           strongNoiseSize,
           strongNoise,
-          true
+          true,
         )
       }
 
@@ -850,7 +850,7 @@ export class DrawStampUtils {
     y: number,
     size: number,
     intensity: number,
-    transparent: boolean = false
+    transparent: boolean = false,
   ) {
     const radiusSquared = (size * size) / 4
     for (let dy = -size / 2; dy < size / 2; dy++) {
@@ -881,7 +881,7 @@ export class DrawStampUtils {
   saveStampAsFiles(
     outputSize: number = 1024,
     sessionId: string | boolean = '',
-    email: string | boolean = ''
+    email: string | boolean = '',
   ) {
     // 首先隐藏辅助线和标尺
     this.drawStampConfigs.ruler.showCrossLine = false
@@ -904,16 +904,16 @@ export class DrawStampUtils {
         // 清除画布，使背景透明
         saveCtx.clearRect(0, 0, outputSize, outputSize)
         // 计算原始 canvas 中印章的位置和大小
-        const originalStampSize =
-          (Math.max(this.drawStampConfigs.width, this.drawStampConfigs.height) +
-            2) *
-          this.mmToPixel
-        const sourceX =
-          (this.canvas.width - originalStampSize) / 2 +
-          this.stampOffsetX * this.mmToPixel
-        const sourceY =
-          (this.canvas.height - originalStampSize) / 2 +
-          this.stampOffsetY * this.mmToPixel
+        const originalStampSize
+          = (Math.max(this.drawStampConfigs.width, this.drawStampConfigs.height)
+            + 2)
+          * this.mmToPixel
+        const sourceX
+          = (this.canvas.width - originalStampSize) / 2
+            + this.stampOffsetX * this.mmToPixel
+        const sourceY
+          = (this.canvas.height - originalStampSize) / 2
+            + this.stampOffsetY * this.mmToPixel
         // 设置2%的边距
         const margin = outputSize * 0.01
         const drawSize = outputSize - 2 * margin
@@ -930,7 +930,7 @@ export class DrawStampUtils {
           margin,
           margin,
           drawSize,
-          drawSize
+          drawSize,
         )
         // 如果启用了做旧效果，在新的 canvas 上应用做旧效果
         if (this.drawStampConfigs.agingEffect.applyAging) {
@@ -946,7 +946,7 @@ export class DrawStampUtils {
         const docxBlob = await this.canvasToDocx(saveCanvas)
         const pdfReader = new FileReader()
         // 使用Promise等待FileReader完成
-        const pdfBase64 = await new Promise<string>(resolve => {
+        const pdfBase64 = await new Promise<string>((resolve) => {
           pdfReader.onloadend = () => {
             const base64data = pdfReader.result as string
             resolve(base64data)
@@ -955,7 +955,7 @@ export class DrawStampUtils {
         })
         // 读取DOCX为base64
         const docxReader = new FileReader()
-        const docxBase64 = await new Promise<string>(resolve => {
+        const docxBase64 = await new Promise<string>((resolve) => {
           docxReader.onloadend = () => {
             const base64data = docxReader.result as string
             resolve(base64data)
@@ -1011,12 +1011,12 @@ export class DrawStampUtils {
                 }),
               })
                 .then(response => response.json())
-                .then(data => {
+                .then((data) => {
                   if (data.success) {
                     console.log('Seal files ZIP saved successfully')
                   }
                 })
-                .catch(error => {
+                .catch((error) => {
                   console.error('Failed to save seal ZIP:', error)
                 })
             }
@@ -1091,8 +1091,8 @@ export class DrawStampUtils {
 
       // 使用我们自己的方法将base64转为Uint8Array (浏览器环境不支持Buffer)
       const binaryData = this.base64ToUint8Array(base64Data)
-      const { Document, Packer, Paragraph, TextRun, ImageRun, AlignmentType } =
-        (window as any).docx
+      const { Document, Packer, Paragraph, TextRun, ImageRun, AlignmentType }
+        = (window as any).docx
 
       // 创建文档对象
       const doc = new Document({
@@ -1170,7 +1170,7 @@ export class DrawStampUtils {
       // 创建SVG元素
       const svgElement = document.createElementNS(
         'http://www.w3.org/2000/svg',
-        'svg'
+        'svg',
       )
       svgElement.setAttribute('width', canvas.width.toString())
       svgElement.setAttribute('height', canvas.height.toString())
@@ -1179,7 +1179,7 @@ export class DrawStampUtils {
       // 创建图像元素
       const imageElement = document.createElementNS(
         'http://www.w3.org/2000/svg',
-        'image'
+        'image',
       )
       imageElement.setAttribute('width', canvas.width.toString())
       imageElement.setAttribute('height', canvas.height.toString())
@@ -1199,8 +1199,8 @@ export class DrawStampUtils {
         canvas.width
       }" height="${canvas.height}">
         <image width="${canvas.width}" height="${
-        canvas.height
-      }" href="${canvas.toDataURL()}" />
+          canvas.height
+        }" href="${canvas.toDataURL()}" />
       </svg>`
     }
   }
@@ -1238,7 +1238,7 @@ export class DrawStampUtils {
         imgWidth,
         imgHeight,
         undefined, // 图像别名，可选
-        'FAST'
+        'FAST',
       )
 
       // 将PDF转换为Blob
@@ -1251,7 +1251,7 @@ export class DrawStampUtils {
         [
           '%PDF-1.7\n1 0 obj\n<</Type/Catalog/Pages 2 0 R>>\nendobj\n2 0 obj\n<</Type/Pages/Kids[3 0 R]/Count 1>>\nendobj\n3 0 obj\n<</Type/Page/MediaBox[0 0 3 3]/Parent 2 0 R/Resources<<>>>>\nendobj\nxref\n0 4\n0000000000 65535 f\n0000000010 00000 n\n0000000053 00000 n\n0000000102 00000 n\ntrailer\n<</Size 4/Root 1 0 R>>\nstartxref\n149\n%%EOF',
         ],
-        { type: 'application/pdf' }
+        { type: 'application/pdf' },
       )
     }
   }
@@ -1260,7 +1260,7 @@ export class DrawStampUtils {
   saveStampAsPNG(
     outputSize: number = 512,
     sessionId: string | boolean = '',
-    email: string | boolean = ''
+    email: string | boolean = '',
   ) {
     return this.saveStampAsFiles(outputSize, sessionId, email)
   }
@@ -1274,7 +1274,7 @@ export class DrawStampUtils {
   refreshStamp(
     refreshSecurityPattern: boolean = false,
     refreshOld: boolean = false,
-    refreshRoughEdge: boolean = false
+    refreshRoughEdge: boolean = false,
   ) {
     // 清除整个画布
     this.canvasCtx.clearRect(0, 0, this.canvas.width, this.canvas.height)
@@ -1290,10 +1290,10 @@ export class DrawStampUtils {
     const x = this.canvas.width / 2 / this.scale
     const y = this.canvas.height / 2 / this.scale
     const mmToPixel = this.mmToPixel
-    const drawRadiusX =
-      (this.drawStampConfigs.width - this.drawStampConfigs.borderWidth) / 2
-    const drawRadiusY =
-      (this.drawStampConfigs.height - this.drawStampConfigs.borderWidth) / 2
+    const drawRadiusX
+      = (this.drawStampConfigs.width - this.drawStampConfigs.borderWidth) / 2
+    const drawRadiusY
+      = (this.drawStampConfigs.height - this.drawStampConfigs.borderWidth) / 2
     const offsetX = this.stampOffsetX * this.mmToPixel
     const offsetY = this.stampOffsetY * this.mmToPixel
     const centerX = x + offsetX
@@ -1308,7 +1308,7 @@ export class DrawStampUtils {
       this.drawStampConfigs.primaryColor,
       refreshSecurityPattern,
       refreshOld,
-      refreshRoughEdge
+      refreshRoughEdge,
     )
     // 恢复状态
     this.canvasCtx.restore()
@@ -1360,7 +1360,7 @@ export class DrawStampUtils {
     borderColor: string,
     refreshSecurityPattern: boolean = false,
     refreshOld: boolean = false,
-    refreshRoughEdge: boolean = false
+    refreshRoughEdge: boolean = false,
   ) {
     try {
       // 清除整个画布
@@ -1385,7 +1385,7 @@ export class DrawStampUtils {
         radiusX,
         radiusY,
         borderWidth,
-        borderColor
+        borderColor,
       )
       // 创建裁剪区域，确保所有内容（文字、图片、五角星等）都被限制在印章的椭圆形状内
       offscreenCtx.save()
@@ -1397,7 +1397,7 @@ export class DrawStampUtils {
         radiusY,
         0,
         0,
-        Math.PI * 2
+        Math.PI * 2,
       )
       offscreenCtx.clip()
       // 绘制内圈列表
@@ -1407,7 +1407,7 @@ export class DrawStampUtils {
           this.drawStampConfigs.innerCircleList,
           centerX,
           centerY,
-          borderColor
+          borderColor,
         )
       }
       // 如果没有图片，绘制五角星或SVG
@@ -1417,19 +1417,19 @@ export class DrawStampUtils {
           this.drawStampConfigs.drawStar,
           centerX,
           centerY,
-          this.drawStampConfigs.primaryColor
+          this.drawStampConfigs.primaryColor,
         )
       }
       // 绘制图片列表
       if (
-        this.drawStampConfigs.imageList &&
-        this.drawStampConfigs.imageList.length > 0
+        this.drawStampConfigs.imageList
+        && this.drawStampConfigs.imageList.length > 0
       ) {
         this.drawImageList(
           offscreenCtx,
           this.drawStampConfigs.imageList,
           centerX,
-          centerY
+          centerY,
         )
       }
       // 绘制公司文字内容，边框的圆形文字
@@ -1440,7 +1440,7 @@ export class DrawStampUtils {
         centerY,
         radiusX,
         radiusY,
-        this.drawStampConfigs.primaryColor
+        this.drawStampConfigs.primaryColor,
       )
       // 绘制印章类型文字内容，边框的矩形文字
       this.drawStampTypeList(
@@ -1448,7 +1448,7 @@ export class DrawStampUtils {
         this.drawStampConfigs.stampTypeList,
         centerX,
         centerY,
-        radiusX
+        radiusX,
       )
       // 绘制编码文字内容，边框的圆形文字
       this.drawCode(
@@ -1457,14 +1457,14 @@ export class DrawStampUtils {
         centerX,
         centerY,
         radiusX,
-        radiusY
+        radiusY,
       )
       // 绘制税号文字内容，边框的圆形文字
       this.drawTaxNumber(
         offscreenCtx,
         this.drawStampConfigs.taxNumber,
         centerX,
-        centerY
+        centerY,
       )
       offscreenCtx.restore()
       // 将离屏 canvas 的内容绘制到主 canvas
@@ -1478,7 +1478,7 @@ export class DrawStampUtils {
           radiusX,
           radiusY,
           borderWidth,
-          refreshRoughEdge
+          refreshRoughEdge,
         )
       }
       if (this.drawStampConfigs.securityPattern.openSecurityPattern) {
@@ -1490,7 +1490,7 @@ export class DrawStampUtils {
           centerY,
           radiusX,
           radiusY,
-          refreshSecurityPattern
+          refreshSecurityPattern,
         )
       }
 
@@ -1504,7 +1504,7 @@ export class DrawStampUtils {
           ctx,
           this.canvas.width,
           this.canvas.height,
-          refreshOld
+          refreshOld,
         )
       }
     } catch (error) {
